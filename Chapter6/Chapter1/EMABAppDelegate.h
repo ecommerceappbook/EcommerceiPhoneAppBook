@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  EMABAppDelegate.h
 //  Chapter1
 //
 //  Created by Liangjun Jiang on 4/15/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface EMABAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

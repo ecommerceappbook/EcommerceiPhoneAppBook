@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2EAD9B8A878F50256630AFC0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C437999C984C6CDD9C62426C /* libPods.a */; };
+		7D3EDC1C1AE2A29200FF229C /* EMABDispatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3EDC1B1AE2A29200FF229C /* EMABDispatchViewController.m */; };
+		7D3EDC1F1AE2A37500FF229C /* EMABConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3EDC1E1AE2A37500FF229C /* EMABConstants.m */; };
 		7D4E4EEC1AE0BB4C001553D9 /* LoginSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4E4EEB1AE0BB4C001553D9 /* LoginSignup.storyboard */; };
 		7DCA057A1ADEE1B800501623 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA05791ADEE1B800501623 /* main.m */; };
-		7DCA057D1ADEE1B800501623 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA057C1ADEE1B800501623 /* AppDelegate.m */; };
-		7DCA05801ADEE1B800501623 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA057F1ADEE1B800501623 /* FirstViewController.m */; };
-		7DCA05831ADEE1B800501623 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA05821ADEE1B800501623 /* SecondViewController.m */; };
+		7DCA057D1ADEE1B800501623 /* EMABAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA057C1ADEE1B800501623 /* EMABAppDelegate.m */; };
 		7DCA05861ADEE1B800501623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DCA05841ADEE1B800501623 /* Main.storyboard */; };
 		7DCA05881ADEE1B800501623 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DCA05871ADEE1B800501623 /* Images.xcassets */; };
 		7DCA058B1ADEE1B800501623 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCA05891ADEE1B800501623 /* LaunchScreen.xib */; };
@@ -31,16 +31,16 @@
 
 /* Begin PBXFileReference section */
 		7B90FA775D57D26A0C9EDF4F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7D3EDC1A1AE2A29200FF229C /* EMABDispatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABDispatchViewController.h; sourceTree = "<group>"; };
+		7D3EDC1B1AE2A29200FF229C /* EMABDispatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABDispatchViewController.m; sourceTree = "<group>"; };
+		7D3EDC1D1AE2A37500FF229C /* EMABConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABConstants.h; sourceTree = "<group>"; };
+		7D3EDC1E1AE2A37500FF229C /* EMABConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABConstants.m; sourceTree = "<group>"; };
 		7D4E4EEB1AE0BB4C001553D9 /* LoginSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSignup.storyboard; sourceTree = "<group>"; };
 		7DCA05741ADEE1B800501623 /* Chapter6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCA05781ADEE1B800501623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DCA05791ADEE1B800501623 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7DCA057B1ADEE1B800501623 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7DCA057C1ADEE1B800501623 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7DCA057E1ADEE1B800501623 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		7DCA057F1ADEE1B800501623 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		7DCA05811ADEE1B800501623 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		7DCA05821ADEE1B800501623 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		7DCA057B1ADEE1B800501623 /* EMABAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMABAppDelegate.h; sourceTree = "<group>"; };
+		7DCA057C1ADEE1B800501623 /* EMABAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMABAppDelegate.m; sourceTree = "<group>"; };
 		7DCA05851ADEE1B800501623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DCA05871ADEE1B800501623 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7DCA058A1ADEE1B800501623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -101,17 +101,17 @@
 		7DCA05761ADEE1B800501623 /* Chapter6 */ = {
 			isa = PBXGroup;
 			children = (
-				7DCA057B1ADEE1B800501623 /* AppDelegate.h */,
-				7DCA057C1ADEE1B800501623 /* AppDelegate.m */,
-				7DCA057E1ADEE1B800501623 /* FirstViewController.h */,
-				7DCA057F1ADEE1B800501623 /* FirstViewController.m */,
-				7DCA05811ADEE1B800501623 /* SecondViewController.h */,
-				7DCA05821ADEE1B800501623 /* SecondViewController.m */,
+				7DCA057B1ADEE1B800501623 /* EMABAppDelegate.h */,
+				7DCA057C1ADEE1B800501623 /* EMABAppDelegate.m */,
 				7DCA05841ADEE1B800501623 /* Main.storyboard */,
 				7DCA05871ADEE1B800501623 /* Images.xcassets */,
 				7DCA05891ADEE1B800501623 /* LaunchScreen.xib */,
 				7DCA05771ADEE1B800501623 /* Supporting Files */,
 				7D4E4EEB1AE0BB4C001553D9 /* LoginSignup.storyboard */,
+				7D3EDC1A1AE2A29200FF229C /* EMABDispatchViewController.h */,
+				7D3EDC1B1AE2A29200FF229C /* EMABDispatchViewController.m */,
+				7D3EDC1D1AE2A37500FF229C /* EMABConstants.h */,
+				7D3EDC1E1AE2A37500FF229C /* EMABConstants.m */,
 			);
 			name = Chapter6;
 			path = Chapter1;
@@ -288,9 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DCA05831ADEE1B800501623 /* SecondViewController.m in Sources */,
-				7DCA057D1ADEE1B800501623 /* AppDelegate.m in Sources */,
-				7DCA05801ADEE1B800501623 /* FirstViewController.m in Sources */,
+				7D3EDC1F1AE2A37500FF229C /* EMABConstants.m in Sources */,
+				7DCA057D1ADEE1B800501623 /* EMABAppDelegate.m in Sources */,
+				7D3EDC1C1AE2A29200FF229C /* EMABDispatchViewController.m in Sources */,
 				7DCA057A1ADEE1B800501623 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

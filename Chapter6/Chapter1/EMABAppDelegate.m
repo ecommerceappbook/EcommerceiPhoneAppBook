@@ -1,31 +1,27 @@
 //
-//  AppDelegate.m
+//  EMABAppDelegate.m
 //  Chapter1
 //
 //  Created by Liangjun Jiang on 4/15/15.
 //  Copyright (c) 2015 Liangjun Jiang. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
-#import <ParseCrashReporting/ParseCrashReporting.h>
-@interface AppDelegate ()
+#import "EMABAppDelegate.h"
+#import "EMABConstants.h"
+
+@interface EMABAppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
-@implementation AppDelegate
+@implementation EMABAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ParseCrashReporting enable];
-    // Uncomment and fill in with your Parse credentials:
-//    [Parse setApplicationId:@"your_application_id" clientKey:@"your_client_key"];
-    //
-    // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
-    // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
-//    [PFFacebookUtils initializeFacebook];
-    // ****************************************************************************
+    
+    UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
+    tabBarController.delegate = self;
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{kIsLoggedInfKey:@(NO)}];
     
     return YES;
 }
@@ -51,5 +47,20 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+#pragma mark - TabbarController Delegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    UINavigationController *navViewController = (UINavigationController *)viewController;
+    if (![navViewController.title isEqualToString:@"Products"]) {
+        if (!([[NSUserDefaults standardUserDefaults] boolForKey:kIsLoggedInfKey])) {
+            UIStoryboard *dispatchStoryboard = [UIStoryboard storyboardWithName:@"LoginSignup" bundle:nil];
+            UINavigationController *navController = (UINavigationController *)[dispatchStoryboard instantiateInitialViewController];
+            [self.window.rootViewController presentViewController:navController animated:YES completion:nil];
+        }
+    }
+}
+
+
 
 @end

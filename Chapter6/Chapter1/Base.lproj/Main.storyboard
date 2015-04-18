@@ -80,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Section-1" id="pqg-lS-vuE">
+                            <tableViewSection headerTitle="Account" id="pqg-lS-vuE">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Ghh-u5-4Zz" style="IBUITableViewCellStyleDefault" id="Xqi-mp-Mt8">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -135,7 +135,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-2" id="m3w-ZX-TrF">
+                            <tableViewSection headerTitle="Sign Out" id="m3w-ZX-TrF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="bCv-5h-Ruz" style="IBUITableViewCellStyleDefault" id="gUP-a3-Bz5">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -380,8 +380,8 @@
         <!--My Account-->
         <scene sceneID="95Z-vr-gGS">
             <objects>
-                <navigationController id="BPr-fy-Hcc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Account" id="gQ5-bJ-3MM"/>
+                <navigationController title="My Account" id="BPr-fy-Hcc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Account" image="third" id="gQ5-bJ-3MM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jdj-ej-pYS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -397,8 +397,8 @@
         <!--Bag-->
         <scene sceneID="iWx-sC-B66">
             <objects>
-                <navigationController id="0n2-VF-5wp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Bag" id="obo-Qh-mQp"/>
+                <navigationController title="Bag" id="0n2-VF-5wp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Bag" image="second" id="obo-Qh-mQp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aSp-5P-ObC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -411,10 +411,10 @@
             </objects>
             <point key="canvasLocation" x="71" y="12"/>
         </scene>
-        <!--Category-->
+        <!--Products-->
         <scene sceneID="FnQ-zR-lNC">
             <objects>
-                <tableViewController id="BL7-ss-sOt" sceneMemberID="viewController">
+                <tableViewController title="Products" id="BL7-ss-sOt" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zay-Xa-tre">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -607,7 +607,7 @@
         <scene sceneID="KFK-wC-7Cx">
             <objects>
                 <navigationController id="oIQ-cC-V14" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Products" id="tjr-z5-vPN"/>
+                    <tabBarItem key="tabBarItem" title="Products" image="first" id="tjr-z5-vPN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eYa-r7-o7z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -643,6 +643,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="first" width="30" height="30"/>
         <image name="product_1" width="350" height="350"/>
+        <image name="second" width="30" height="30"/>
+        <image name="third" width="23" height="24"/>
     </resources>
 </document>
