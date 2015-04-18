@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gMC-ed-d7a">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -8,6 +8,7 @@
         <scene sceneID="NXR-s4-dNe">
             <objects>
                 <navigationController id="gMC-ed-d7a" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UX7-Qv-H2T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,11 +30,11 @@
                         <viewControllerLayoutGuide type="bottom" id="H1D-1i-jJG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rlx-v2-hlX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-HO-f14">
-                                <rect key="frame" x="279" y="205" width="43" height="30"/>
+                                <rect key="frame" x="139" y="166" width="43" height="30"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -42,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngE-jG-EDv">
-                                <rect key="frame" x="273" y="280" width="55" height="30"/>
+                                <rect key="frame" x="133" y="250" width="55" height="30"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -51,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lum-HH-WZL">
-                                <rect key="frame" x="226" y="351" width="148" height="30"/>
+                                <rect key="frame" x="86" y="334" width="148" height="30"/>
                                 <state key="normal" title="Log In with Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,46 +61,47 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6s9-wF-3uv"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hfr-KG-Pah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="701" y="387"/>
+            <point key="canvasLocation" x="344" y="388"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In-->
         <scene sceneID="24U-P2-7Au">
             <objects>
-                <viewController id="RwQ-4q-GUo" sceneMemberID="viewController">
+                <viewController title="Log In" id="RwQ-4q-GUo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Za-Zc-PMN"/>
                         <viewControllerLayoutGuide type="bottom" id="ZkF-Tp-7WW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2R3-gQ-SC0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3r-Vt-x3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589" y="1019"/>
+            <point key="canvasLocation" x="791" y="775"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up-->
         <scene sceneID="EA3-7Z-feP">
             <objects>
-                <viewController id="Syy-Aa-eA8" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="Syy-Aa-eA8" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8fR-NJ-77E"/>
                         <viewControllerLayoutGuide type="bottom" id="Z9J-Ga-hw5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5nX-ji-RjL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaR-IN-3iq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="-169"/>
+            <point key="canvasLocation" x="798" y="21"/>
         </scene>
     </scenes>
 </document>
