@@ -7,8 +7,10 @@
 //
 
 #import "EMABAppDelegate.h"
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "EMABConstants.h"
-
+#import "EMABUser.h"
 @interface EMABAppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -17,6 +19,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [EMABUser registerSubclass];
+    
+    [Parse setApplicationId:@"your_application_id" clientKey:@"your_client_key"];
+    
+    // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
+    // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
+    [PFFacebookUtils initializeFacebook];
     
     UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
     tabBarController.delegate = self;
