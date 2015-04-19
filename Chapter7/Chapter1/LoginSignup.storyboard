@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-150" y="388"/>
         </scene>
-        <!--E-commerce iPhone Book-->
+        <!--Dispatch-->
         <scene sceneID="lZN-ne-HKw">
             <objects>
-                <viewController storyboardIdentifier="MABDispatchViewController" title="E-commerce iPhone Book" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9fa-mp-1Kr" customClass="EMABDispatchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MABDispatchViewController" title="Dispatch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9fa-mp-1Kr" customClass="EMABDispatchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MDP-od-V8k"/>
                         <viewControllerLayoutGuide type="bottom" id="H1D-1i-jJG"/>
@@ -79,7 +79,7 @@
         <!--Sign Up-->
         <scene sceneID="24U-P2-7Au">
             <objects>
-                <viewController title="Sign Up" id="RwQ-4q-GUo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EMABSignupViewController" title="Sign Up" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RwQ-4q-GUo" customClass="EMABSignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Za-Zc-PMN"/>
                         <viewControllerLayoutGuide type="bottom" id="ZkF-Tp-7WW"/>
@@ -153,7 +153,7 @@
         <!--Log In-->
         <scene sceneID="EA3-7Z-feP">
             <objects>
-                <viewController title="Log In" id="Syy-Aa-eA8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EMABLoginViewController" title="Log In" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Syy-Aa-eA8" customClass="EMABLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8fR-NJ-77E"/>
                         <viewControllerLayoutGuide type="bottom" id="Z9J-Ga-hw5"/>

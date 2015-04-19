@@ -30,6 +30,8 @@
 		7D2B55B51AE4323D002720D6 /* EMABUserProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B55B41AE4323D002720D6 /* EMABUserProfileTableViewController.m */; };
 		7D2B55B81AE4326E002720D6 /* EMABUserFavoriteHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B55B71AE4326E002720D6 /* EMABUserFavoriteHistoryTableViewController.m */; };
 		7D2B55BB1AE4329B002720D6 /* EMABUserPaymentMethodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B55BA1AE4329B002720D6 /* EMABUserPaymentMethodTableViewController.m */; };
+		7D2B55BE1AE43718002720D6 /* EMABUserAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B55BD1AE43718002720D6 /* EMABUserAccountTableViewController.m */; };
+		7D2B55C11AE437BC002720D6 /* EMABUserOrderHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B55C01AE437BC002720D6 /* EMABUserOrderHistoryTableViewController.m */; };
 		7D3EDC1C1AE2A29200FF229C /* EMABDispatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3EDC1B1AE2A29200FF229C /* EMABDispatchViewController.m */; };
 		7D3EDC1F1AE2A37500FF229C /* EMABConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3EDC1E1AE2A37500FF229C /* EMABConstants.m */; };
 		7D4E4EEC1AE0BB4C001553D9 /* LoginSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4E4EEB1AE0BB4C001553D9 /* LoginSignup.storyboard */; };
@@ -97,6 +99,10 @@
 		7D2B55B71AE4326E002720D6 /* EMABUserFavoriteHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserFavoriteHistoryTableViewController.m; sourceTree = "<group>"; };
 		7D2B55B91AE4329B002720D6 /* EMABUserPaymentMethodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserPaymentMethodTableViewController.h; sourceTree = "<group>"; };
 		7D2B55BA1AE4329B002720D6 /* EMABUserPaymentMethodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserPaymentMethodTableViewController.m; sourceTree = "<group>"; };
+		7D2B55BC1AE43718002720D6 /* EMABUserAccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserAccountTableViewController.h; sourceTree = "<group>"; };
+		7D2B55BD1AE43718002720D6 /* EMABUserAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserAccountTableViewController.m; sourceTree = "<group>"; };
+		7D2B55BF1AE437BC002720D6 /* EMABUserOrderHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserOrderHistoryTableViewController.h; sourceTree = "<group>"; };
+		7D2B55C01AE437BC002720D6 /* EMABUserOrderHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserOrderHistoryTableViewController.m; sourceTree = "<group>"; };
 		7D3EDC1A1AE2A29200FF229C /* EMABDispatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABDispatchViewController.h; sourceTree = "<group>"; };
 		7D3EDC1B1AE2A29200FF229C /* EMABDispatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABDispatchViewController.m; sourceTree = "<group>"; };
 		7D3EDC1D1AE2A37500FF229C /* EMABConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABConstants.h; sourceTree = "<group>"; };
@@ -207,6 +213,10 @@
 				7D2B55B71AE4326E002720D6 /* EMABUserFavoriteHistoryTableViewController.m */,
 				7D2B55B91AE4329B002720D6 /* EMABUserPaymentMethodTableViewController.h */,
 				7D2B55BA1AE4329B002720D6 /* EMABUserPaymentMethodTableViewController.m */,
+				7D2B55BC1AE43718002720D6 /* EMABUserAccountTableViewController.h */,
+				7D2B55BD1AE43718002720D6 /* EMABUserAccountTableViewController.m */,
+				7D2B55BF1AE437BC002720D6 /* EMABUserOrderHistoryTableViewController.h */,
+				7D2B55C01AE437BC002720D6 /* EMABUserOrderHistoryTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -438,10 +448,12 @@
 				7D2B55A01AE4310F002720D6 /* EMABSignupViewController.m in Sources */,
 				7D2B55911AE43049002720D6 /* EMABCategoryTableViewCell.m in Sources */,
 				7D2B55821AE42D5B002720D6 /* EMABProduct.m in Sources */,
+				7D2B55BE1AE43718002720D6 /* EMABUserAccountTableViewController.m in Sources */,
 				7D3EDC1F1AE2A37500FF229C /* EMABConstants.m in Sources */,
 				7D2B558B1AE42DA2002720D6 /* EMABPaymentMethod.m in Sources */,
 				7D2B55851AE42D78002720D6 /* EMABOrderItem.m in Sources */,
 				7D2B55A91AE43194002720D6 /* EMABProductsTableViewController.m in Sources */,
+				7D2B55C11AE437BC002720D6 /* EMABUserOrderHistoryTableViewController.m in Sources */,
 				7D2B558E1AE42DC1002720D6 /* EMABFavoriteProduct.m in Sources */,
 				7DCA057D1ADEE1B800501623 /* EMABAppDelegate.m in Sources */,
 				7D2B557C1AE42D1C002720D6 /* EMABUser.m in Sources */,

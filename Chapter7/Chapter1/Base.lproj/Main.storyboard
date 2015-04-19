@@ -7,7 +7,7 @@
         <!--Bag-->
         <scene sceneID="WtE-Qv-VZY">
             <objects>
-                <tableViewController id="0hX-v0-CLX" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EMABBagTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0hX-v0-CLX" customClass="EMABBagTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="LKj-jV-ujd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,11 +133,11 @@
         <!--My Account-->
         <scene sceneID="jhC-Pw-15F">
             <objects>
-                <tableViewController title="My Account" id="6Zy-0c-OLf" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ELP-Tr-FWl">
+                <tableViewController storyboardIdentifier="EMABUserAccountTableViewController" title="My Account" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Zy-0c-OLf" customClass="EMABUserAccountTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ELP-Tr-FWl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Account" id="pqg-lS-vuE">
                                 <cells>
@@ -192,6 +192,23 @@
                                             <segue destination="EDc-ls-zu5" kind="show" id="geR-pG-PEy"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="sft-fv-ozM" style="IBUITableViewCellStyleDefault" id="oW0-LP-Hr8">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oW0-LP-Hr8" id="x1K-i6-j0C">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Favorite Products" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sft-fv-ozM">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="6B2-fZ-6Dg" kind="show" trigger="accessoryAction" id="m1v-XR-d0M"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Sign Out" id="m3w-ZX-TrF">
@@ -227,7 +244,7 @@
         <!--Contact Info-->
         <scene sceneID="Idg-sN-1Mc">
             <objects>
-                <tableViewController id="aJa-tX-Jg3" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EMABUserProfileTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aJa-tX-Jg3" customClass="EMABUserProfileTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4Bk-8p-lhI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,12 +324,48 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJY-Lh-oZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="580"/>
+            <point key="canvasLocation" x="1023" y="288"/>
+        </scene>
+        <!--Favorite Products-->
+        <scene sceneID="Wp3-00-UjF">
+            <objects>
+                <tableViewController storyboardIdentifier="EMABUserFavoriteHistoryTableViewController" id="6B2-fZ-6Dg" customClass="EMABUserFavoriteHistoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="I57-3w-ozy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="DIy-Zr-lHe" style="IBUITableViewCellStyleDefault" id="teR-iI-Tzn">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="teR-iI-Tzn" id="g59-0k-hxB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DIy-Zr-lHe">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6B2-fZ-6Dg" id="Lqg-a3-sjY"/>
+                            <outlet property="delegate" destination="6B2-fZ-6Dg" id="ZRk-it-3S0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorite Products" id="rh8-GZ-7YL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqP-9X-pKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="1644"/>
         </scene>
         <!--History-->
         <scene sceneID="Q7C-tz-jOC">
             <objects>
-                <tableViewController id="EDc-ls-zu5" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EMABUserOrderHistoryTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EDc-ls-zu5" customClass="EMABUserOrderHistoryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ttq-SE-q1j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,12 +446,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Lg-BS-POz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="1395"/>
+            <point key="canvasLocation" x="1434" y="1319"/>
         </scene>
         <!--Payment Methods-->
         <scene sceneID="7Ga-A6-xbk">
             <objects>
-                <tableViewController id="mHm-sE-kqi" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EMABUserPaymentMethodTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mHm-sE-kqi" customClass="EMABUserPaymentMethodTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8SO-n8-wuA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -443,7 +496,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovj-uB-4wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="971"/>
+            <point key="canvasLocation" x="1434" y="667"/>
         </scene>
         <!--My Account-->
         <scene sceneID="95Z-vr-gGS">
@@ -479,10 +532,10 @@
             </objects>
             <point key="canvasLocation" x="71" y="12"/>
         </scene>
-        <!--Products-->
+        <!--Category-->
         <scene sceneID="FnQ-zR-lNC">
             <objects>
-                <tableViewController title="Products" id="BL7-ss-sOt" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EMABCategoriesTableViewController" title="Category" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BL7-ss-sOt" customClass="EMABCategoriesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zay-Xa-tre">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,7 +605,7 @@
         <!--Products-->
         <scene sceneID="pCt-V0-NoE">
             <objects>
-                <tableViewController title="Products" id="6NJ-1a-o1S" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EMABProductsTableViewController" title="Products" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6NJ-1a-o1S" customClass="EMABProductsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OUe-8s-HXY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -651,7 +704,7 @@
         <!--Price Filter-->
         <scene sceneID="jVV-6R-xHE">
             <objects>
-                <viewController id="5iU-wv-LLi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EMABProductsFilterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5iU-wv-LLi" customClass="EMABProductsFilterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D0z-Pf-T4i"/>
                         <viewControllerLayoutGuide type="bottom" id="X2f-Gz-xvQ"/>
@@ -732,7 +785,7 @@
         <!--Product Detail-->
         <scene sceneID="0wZ-bW-pSj">
             <objects>
-                <viewController title="Product Detail" id="MBT-sT-Psj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EMABProductDetailViewController" title="Product Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MBT-sT-Psj" customClass="EMABProductDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HN9-E0-aZ2"/>
                         <viewControllerLayoutGuide type="bottom" id="wDx-9r-Tq8"/>
