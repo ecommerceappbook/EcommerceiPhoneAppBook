@@ -165,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="347" y="971"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Contact Info-->
         <scene sceneID="Idg-sN-1Mc">
             <objects>
                 <tableViewController id="aJa-tX-Jg3" sceneMemberID="viewController">
@@ -241,13 +241,16 @@
                             <outlet property="delegate" destination="aJa-tX-Jg3" id="XkJ-BT-MGa"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Contact Info" id="KY2-D2-kcp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="G2a-hL-v0M"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJY-Lh-oZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023" y="580"/>
         </scene>
-        <!--Table View Controller-->
+        <!--History-->
         <scene sceneID="Q7C-tz-jOC">
             <objects>
                 <tableViewController id="EDc-ls-zu5" sceneMemberID="viewController">
@@ -326,13 +329,14 @@
                             <outlet property="delegate" destination="EDc-ls-zu5" id="jAz-e4-G2U"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="History" id="WLv-MB-6MM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Lg-BS-POz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023" y="1395"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Payment Methods-->
         <scene sceneID="7Ga-A6-xbk">
             <objects>
                 <tableViewController id="mHm-sE-kqi" sceneMemberID="viewController">
@@ -371,6 +375,11 @@
                             <outlet property="delegate" destination="mHm-sE-kqi" id="ImB-BM-O6X"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Payment Methods" id="y8j-Fb-qHV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Dt-yA-8cm"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovj-uB-4wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -489,6 +498,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Product name" id="pJI-mY-Kz3">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <sections>
                             <tableViewSection id="PKb-oG-wX5">
                                 <cells>
@@ -563,6 +577,9 @@
                             <outlet property="delegate" destination="6NJ-1a-o1S" id="Spn-BV-zoG"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Products" id="aB8-44-hHc">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="1pN-ph-v2X"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veo-sm-erB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -595,9 +612,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGe-c0-oUj">
+                                <rect key="frame" x="16" y="367" width="288" height="30"/>
+                                <state key="normal" title="Add to Bag">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Skin So Soft Original 5-piece Pampering Set" id="P5c-Uk-oKT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSb-W1-JWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
