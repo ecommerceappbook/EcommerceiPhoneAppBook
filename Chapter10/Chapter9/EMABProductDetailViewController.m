@@ -8,30 +8,44 @@
 
 #import "EMABProductDetailViewController.h"
 #import "EMABProduct.h"
+#import <ParseUI/PFImageView.h>
+#import "EMABOrder.h"
+#import "EMABFavoriteProduct.h"
 @interface EMABProductDetailViewController ()
+@property (nonatomic, weak) IBOutlet PFImageView *fullsizeImageView;
+@property (nonatomic, weak) IBOutlet UILabel *productNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *productPriceLabel;
+@property (nonatomic, weak) IBOutlet UITextView *detailTextView;
 
 @end
 
 @implementation EMABProductDetailViewController
 
+-(void)setProduct:(EMABProduct *)product{
+    if (_product !=product) {
+        _product = product;
+    }
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(IBAction)onBag:(id)sender
+{
+   
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(IBAction)onFavorite:(id)sender{
+    
+    
+    
 }
-*/
+
 
 @end

@@ -753,7 +753,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product_1" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-z6-6aZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product_1" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-z6-6aZ" customClass="PFImageView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="180"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skin So Soft Original 5-Piece Pampering Set" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3B-ff-qx0">
@@ -768,16 +768,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-pD-u9z">
+                                <rect key="frame" x="156" y="415" width="148" height="30"/>
+                                <state key="normal" title="Favorite It">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onFavorite:" destination="MBT-sT-Psj" eventType="touchUpInside" id="Crl-HR-Yuz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed " translatesAutoresizingMaskIntoConstraints="NO" id="LYQ-yh-M4z">
+                                <rect key="frame" x="6" y="303" width="298" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGe-c0-oUj">
-                                <rect key="frame" x="16" y="367" width="288" height="30"/>
+                                <rect key="frame" x="-51" y="415" width="288" height="30"/>
                                 <state key="normal" title="Add to Bag">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onBag:" destination="MBT-sT-Psj" eventType="touchUpInside" id="NDe-js-VbJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Skin So Soft Original 5-piece Pampering Set" id="P5c-Uk-oKT"/>
+                    <connections>
+                        <outlet property="detailTextView" destination="LYQ-yh-M4z" id="5xz-iT-eTx"/>
+                        <outlet property="fullsizeImageView" destination="pTb-z6-6aZ" id="ATl-uk-l4M"/>
+                        <outlet property="productNameLabel" destination="e3B-ff-qx0" id="bNE-6F-T2d"/>
+                        <outlet property="productPriceLabel" destination="Hs5-78-BX0" id="feI-gM-GQ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSb-W1-JWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
