@@ -47,8 +47,13 @@
 }
 
 -(IBAction)onDone:(id)sender{
-    self.finishBlock(self, minPrice, maxPrice);
-    [self.navigationController popViewControllerAnimated:YES];
+    if (minPrice > 0 && minPrice < maxPrice) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Error") message:NSLocalizedString(@"Please make sure your max price is greater than your min price.", @"") delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil, nil];
+        [alertView show];
+    } else {
+        self.finishBlock(self, minPrice, maxPrice);
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

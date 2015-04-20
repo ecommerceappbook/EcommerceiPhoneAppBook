@@ -629,6 +629,7 @@
                     <navigationItem key="navigationItem" title="Products" id="aB8-44-hHc">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="1pN-ph-v2X">
                             <connections>
+                                <action selector="onFilter:" destination="6NJ-1a-o1S" id="2az-v0-jWv"/>
                                 <segue destination="5iU-wv-LLi" kind="show" id="3QR-gx-QVp"/>
                             </connections>
                         </barButtonItem>

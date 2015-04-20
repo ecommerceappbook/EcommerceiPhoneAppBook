@@ -78,8 +78,6 @@
     };
     
     [self.navigationController presentViewController:viewController animated:YES completion:nil];
-    
-    
 }
 
 #pragma mark - Table View
