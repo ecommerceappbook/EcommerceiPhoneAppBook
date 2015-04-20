@@ -6,7 +6,6 @@ PODS:
     - Parse (~> 1.7)
 
 DEPENDENCIES:
-  - Parse (~> 1.6)
   - ParseUI
 
 SPEC CHECKSUMS:

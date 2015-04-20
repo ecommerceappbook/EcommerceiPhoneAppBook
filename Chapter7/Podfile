@@ -1,3 +1,2 @@
 source 'https://github.com/CocoaPods/Specs.git'
-pod 'Parse', '~> 1.6'
 pod 'ParseUI'
