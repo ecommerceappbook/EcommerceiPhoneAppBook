@@ -8,6 +8,9 @@
 
 #import "PFTableViewCell.h"
 
+#import "EMABCategory.h"
 @interface EMABCategoryTableViewCell : PFTableViewCell
+
+-(void)configureItem:(EMABCategory *)item;
 
 @end

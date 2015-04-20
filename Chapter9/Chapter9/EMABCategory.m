@@ -7,7 +7,20 @@
 //
 
 #import "EMABCategory.h"
+#import  <Parse/PFObject+Subclass.h>
 
 @implementation EMABCategory
+@dynamic title, image;
 
++(NSString *)parseClassName
+{
+    return @"Category";
+}
+
++(PFQuery *)basicQuery{
+    PFQuery *query = [PFQuery queryWithClassName:[self parseClassName]];
+    [query orderByAscending:@"title"];
+    return query;
+    
+}
 @end

@@ -8,6 +8,11 @@
 
 #import <Parse/Parse.h>
 
-@interface EMABCategory : PFObject
+@interface EMABCategory : PFObject<PFSubclassing>
 
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) PFFile *image;
+
+
++(PFQuery *)basicQuery;
 @end

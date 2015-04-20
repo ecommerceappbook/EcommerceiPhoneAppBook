@@ -7,15 +7,20 @@
 //
 
 #import "EMABCategoryTableViewCell.h"
+#import <ParseUI/PFImageView.h>
+
+@interface EMABCategoryTableViewCell()
+@property (nonatomic, weak) IBOutlet PFImageView *backgroundImageView;
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@end;
+
 
 @implementation EMABCategoryTableViewCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)configureItem:(EMABCategory *)item
+{
+    
+    
 }
-*/
 
 @end
