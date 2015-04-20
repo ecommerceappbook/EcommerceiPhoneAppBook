@@ -7,7 +7,9 @@
 //
 
 #import "PFTableViewCell.h"
-
+@class EMABProduct;
 @interface EMABProductTableViewCell : PFTableViewCell
+
+-(void)configureItem:(EMABProduct *)product;
 
 @end

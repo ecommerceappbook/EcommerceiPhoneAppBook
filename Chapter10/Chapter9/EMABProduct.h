@@ -13,8 +13,12 @@
 @property (nonatomic, copy) NSString *detail;
 @property (nonatomic, assign) float price;
 @property (nonatomic, copy) NSString *priceUnit;
+@property (nonatomic, strong) PFFile *thumbnail;
+@property (nonatomic, strong) PFFile *fullsizeImage;
+
 @property (nonatomic, strong) EMABCategory *brand;
 
 +(PFQuery *)queryForCategory:(EMABCategory *)brand;
 
+-(NSString *)friendlyPrice;
 @end

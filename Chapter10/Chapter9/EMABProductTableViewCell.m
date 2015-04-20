@@ -7,15 +7,29 @@
 //
 
 #import "EMABProductTableViewCell.h"
+#import <ParseUI/PFImageView.h>
+#import "EMABProduct.h"
+@interface EMABProductTableViewCell()
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *priceLabel;
+@property (nonatomic, weak) IBOutlet PFImageView *thumbnailImageView;
+
+
+@end
+
 
 @implementation EMABProductTableViewCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
+-(void)configureItem:(EMABProduct *)product{
+    self.nameLabel.text = product.name;
+    self.priceLabel.text = [product friendlyPrice];
+    self.thumbnailImageView.image = nil;
+    if (product.thumbnail) {
+        self.thumbnailImageView.file = product.thumbnail;
+        [self.thumbnailImageView loadInBackground];
+    } else
+        self.thumbnailImageView.image = [UIImage imageNamed:@"default_product_thumbnail"];
+    
+}
 @end

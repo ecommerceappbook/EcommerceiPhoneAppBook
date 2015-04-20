@@ -10,7 +10,7 @@
 #import  <Parse/PFObject+Subclass.h>
 #import "EMABConstants.h"
 @implementation EMABProduct
-@dynamic name, price, priceUnit, detail, brand;
+@dynamic name, price, priceUnit, detail, thumbnail, fullsizeImage, brand;
 
 +(NSString *)parseClassName
 {
@@ -30,4 +30,7 @@
     return query;
 }
 
+-(NSString *)friendlyPrice{
+    return [NSString localizedStringWithFormat:@"$ %.2f/%@", self.price, self.priceUnit];
+}
 @end
