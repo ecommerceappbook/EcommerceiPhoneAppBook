@@ -52,10 +52,9 @@
     if (indexPath.row == [[self objects] count]) {
         [self loadNextPage];
     } else {
-//        EMABProductsTableViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EMABProductsTableViewController"];
-//        [viewController setCategory:(EMABCategory*)[self objectAtIndexPath:indexPath]];
-//        [self.navigationController pushViewController:viewController animated:YES];
-//        
+        EMABProductsTableViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EMABProductsTableViewController"];
+        [viewController setBrand:(EMABCategory*)[self objectAtIndexPath:indexPath]];
+        [self.navigationController pushViewController:viewController animated:YES];
     }
 }
 

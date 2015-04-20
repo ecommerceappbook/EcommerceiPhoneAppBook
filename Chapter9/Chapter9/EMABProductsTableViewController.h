@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <ParseUI/PFQueryTableViewController.h>
+@class EMABCategory;
 @interface EMABProductsTableViewController : PFQueryTableViewController
-
+@property (nonatomic, strong) EMABCategory *brand;
 @end

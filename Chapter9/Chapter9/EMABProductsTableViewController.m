@@ -10,4 +10,11 @@
 
 @implementation EMABProductsTableViewController
 
+
+-(void)setBrand:(EMABCategory *)brand
+{
+    if (_brand != brand) {
+        _brand = brand;
+    }
+}
 @end
