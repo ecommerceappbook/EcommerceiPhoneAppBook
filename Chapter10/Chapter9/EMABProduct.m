@@ -7,7 +7,27 @@
 //
 
 #import "EMABProduct.h"
-
+#import  <Parse/PFObject+Subclass.h>
+#import "EMABConstants.h"
 @implementation EMABProduct
+@dynamic name, price, priceUnit, detail, brand;
+
++(NSString *)parseClassName
+{
+    return kProduct;
+}
+
++(PFQuery *)basicQuery {
+    PFQuery *query = [PFQuery queryWithClassName:[self parseClassName]];
+    [query orderByAscending:@"name"];
+    return query;
+}
+
+
++(PFQuery *)queryForCategory:(EMABCategory *)brand{
+    PFQuery  *query = [self basicQuery];
+    [query whereKey:@"brand" equalTo:brand];
+    return query;
+}
 
 @end

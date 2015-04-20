@@ -7,7 +7,14 @@
 //
 
 #import <Parse/Parse.h>
+@class EMABCategory;
+@interface EMABProduct : PFObject<PFSubclassing>
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *detail;
+@property (nonatomic, assign) float price;
+@property (nonatomic, copy) NSString *priceUnit;
+@property (nonatomic, strong) EMABCategory *brand;
 
-@interface EMABProduct : PFObject
++(PFQuery *)queryForCategory:(EMABCategory *)brand;
 
 @end
