@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface EMABUserFavoriteHistoryTableViewController : PFTableViewController
+#import <ParseUI/PFQueryTableViewController.h>
+@interface EMABUserFavoriteHistoryTableViewController : PFQueryTableViewController
 
 @end

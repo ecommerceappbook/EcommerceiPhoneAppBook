@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface EMABUserPaymentMethodTableViewController : PFTableViewController
+#import <ParseUI/PFQueryTableViewController.h>
+@interface EMABUserPaymentMethodTableViewController : PFQueryTableViewController
 
 @end

@@ -8,7 +8,7 @@
 
 #import "EMABAppDelegate.h"
 #import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
+//#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "EMABConstants.h"
 #import "EMABUser.h"
 #import "EMABCategory.h"
@@ -34,9 +34,8 @@
     [EMABPaymentMethod registerSubclass];
     
     [Parse setApplicationId:kParseApplicationID clientKey:kParseClientKey];
-    [PFFacebookUtils initializeFacebook];
-   
-
+//    [PFFacebookUtils initializeFacebook];
+ 
     UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
     tabBarController.delegate = self;
     

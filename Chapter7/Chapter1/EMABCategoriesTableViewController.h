@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface EMABCategoriesTableViewController : PFTableViewController
+#import <ParseUI/PFQueryTableViewController.h>
+@interface EMABCategoriesTableViewController : PFQueryTableViewController
 
 @end

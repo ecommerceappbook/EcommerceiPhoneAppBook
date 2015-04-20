@@ -1,40 +1,17 @@
 PODS:
   - Bolts (1.1.4)
-  - Facebook-iOS-SDK (3.23.2):
-    - Bolts (~> 1.0)
   - Parse (1.7.1):
     - Bolts (~> 1.1)
-  - ParseCrashReporting (1.7.1):
-    - Parse (~> 1.7.1)
-  - ParseFacebookUtils (1.7.1):
-    - Facebook-iOS-SDK (~> 3.23)
-    - Parse (~> 1.7.1)
   - ParseUI (1.1.3):
     - Parse (~> 1.7)
-  - Stripe (3.1.0):
-    - Stripe/Core
-  - Stripe/ApplePay (3.1.0):
-    - Stripe/Core
-  - Stripe/Core (3.1.0)
-  - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - Parse (~> 1.6)
-  - ParseCrashReporting
-  - ParseFacebookUtils (~> 1.6)
   - ParseUI
-  - Stripe
-  - Stripe/ApplePay
-  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
-  Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
   Parse: fa8ec29de6d82035635986c11946299fb1b38316
-  ParseCrashReporting: 9aeff8680d500e5e833564fca5b60333f7bb7403
-  ParseFacebookUtils: fa09adf78372b589163b5a71a34d6ebc7eb83395
   ParseUI: 1a68e9cebc3bd458eed9605ce7b33d7cc082f473
-  Stripe: 8a456332f4db97bd0b8457fc8cce1e1a69ac0cd1
-  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.34.4

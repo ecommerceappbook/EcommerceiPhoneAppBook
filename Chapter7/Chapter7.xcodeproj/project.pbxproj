@@ -233,7 +233,7 @@
 		7DCA056B1ADEE1B800501623 = {
 			isa = PBXGroup;
 			children = (
-				7DCA05761ADEE1B800501623 /* Chapter6 */,
+				7DCA05761ADEE1B800501623 /* Chapter7 */,
 				7DCA05931ADEE1B800501623 /* Chapter1Tests */,
 				7DCA05751ADEE1B800501623 /* Products */,
 				E5D85610AB38869682929626 /* Pods */,
@@ -250,7 +250,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7DCA05761ADEE1B800501623 /* Chapter6 */ = {
+		7DCA05761ADEE1B800501623 /* Chapter7 */ = {
 			isa = PBXGroup;
 			children = (
 				7D2B55791AE42CDF002720D6 /* Utility */,
@@ -265,7 +265,7 @@
 				7DCA05771ADEE1B800501623 /* Supporting Files */,
 				7D4E4EEB1AE0BB4C001553D9 /* LoginSignup.storyboard */,
 			);
-			name = Chapter6;
+			name = Chapter7;
 			path = Chapter1;
 			sourceTree = "<group>";
 		};

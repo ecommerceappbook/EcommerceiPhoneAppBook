@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface EMABUserOrderHistoryTableViewController : PFTableViewController
+#import <ParseUI/PFQueryTableViewController.h>
+@interface EMABUserOrderHistoryTableViewController : PFQueryTableViewController
 
 @end

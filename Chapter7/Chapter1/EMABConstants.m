@@ -10,11 +10,11 @@
 
 NSString *const kIsLoggedInfKey   = @"kIsLoggedIn";
 NSString *const kParseApplicationID = @"YOUR-PARSE-APPLICATION-ID";
-extern NSString *const kStripeTestPublishableKey = @"YOUR-STRIPE-TEST-PUBLISHABLE-KEY";
-extern NSString *const kStripeTestSecretKey = @"YOUR-STRIPE-TEST-SECRET-KEY";
-extern NSString *const kStripeLivePublishableKey = @"YOUR-STRIPE-LIVE-PUBLISHABLE-KEY";
-extern NSString *const kStripeLiveSecretKey = @"YOUR-STRIPE-LIVE-SECRET-KEY";
-extern NSString *const kMailgunAPIKey = @"YOUR-MAILGUN-API-KEY";
+NSString *const kStripeTestPublishableKey = @"YOUR-STRIPE-TEST-PUBLISHABLE-KEY";
+NSString *const kStripeTestSecretKey = @"YOUR-STRIPE-TEST-SECRET-KEY";
+NSString *const kStripeLivePublishableKey = @"YOUR-STRIPE-LIVE-PUBLISHABLE-KEY";
+NSString *const kStripeLiveSecretKey = @"YOUR-STRIPE-LIVE-SECRET-KEY";
+NSString *const kMailgunAPIKey = @"YOUR-MAILGUN-API-KEY";
 
 
 @implementation EMABConstants
