@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EAD9B8A878F50256630AFC0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C437999C984C6CDD9C62426C /* libPods.a */; };
+		7D7DCDAE1AE55345008597C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD701AE55345008597C8 /* LaunchScreen.xib */; };
+		7D7DCDAF1AE55345008597C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD721AE55345008597C8 /* Main.storyboard */; };
+		7D7DCDB01AE55345008597C8 /* EMABAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD751AE55345008597C8 /* EMABAppDelegate.m */; };
+		7D7DCDB11AE55345008597C8 /* EMABBagTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD771AE55345008597C8 /* EMABBagTableViewController.m */; };
+		7D7DCDB21AE55345008597C8 /* EMABCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD791AE55345008597C8 /* EMABCategoriesTableViewController.m */; };
+		7D7DCDB31AE55345008597C8 /* EMABCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD7B1AE55345008597C8 /* EMABCategory.m */; };
+		7D7DCDB41AE55345008597C8 /* EMABCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD7D1AE55345008597C8 /* EMABCategoryTableViewCell.m */; };
+		7D7DCDB51AE55345008597C8 /* EMABConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD7F1AE55345008597C8 /* EMABConstants.m */; };
+		7D7DCDB61AE55345008597C8 /* EMABDispatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD811AE55345008597C8 /* EMABDispatchViewController.m */; };
+		7D7DCDB71AE55345008597C8 /* EMABFavoriteProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD831AE55345008597C8 /* EMABFavoriteProduct.m */; };
+		7D7DCDB81AE55345008597C8 /* EMABLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD851AE55345008597C8 /* EMABLoginViewController.m */; };
+		7D7DCDB91AE55345008597C8 /* EMABOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD871AE55345008597C8 /* EMABOrder.m */; };
+		7D7DCDBA1AE55345008597C8 /* EMABOrderHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD891AE55345008597C8 /* EMABOrderHistoryTableViewCell.m */; };
+		7D7DCDBB1AE55345008597C8 /* EMABOrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD8B1AE55345008597C8 /* EMABOrderItem.m */; };
+		7D7DCDBC1AE55345008597C8 /* EMABOrderItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD8D1AE55345008597C8 /* EMABOrderItemTableViewCell.m */; };
+		7D7DCDBD1AE55345008597C8 /* EMABPaymentMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD8F1AE55345008597C8 /* EMABPaymentMethod.m */; };
+		7D7DCDBE1AE55345008597C8 /* EMABPaymentMethodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD911AE55345008597C8 /* EMABPaymentMethodTableViewCell.m */; };
+		7D7DCDBF1AE55345008597C8 /* EMABProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD931AE55345008597C8 /* EMABProduct.m */; };
+		7D7DCDC01AE55345008597C8 /* EMABProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD951AE55345008597C8 /* EMABProductDetailViewController.m */; };
+		7D7DCDC11AE55345008597C8 /* EMABProductsFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD971AE55345008597C8 /* EMABProductsFilterViewController.m */; };
+		7D7DCDC21AE55345008597C8 /* EMABProductsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD991AE55345008597C8 /* EMABProductsTableViewController.m */; };
+		7D7DCDC31AE55345008597C8 /* EMABProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD9B1AE55345008597C8 /* EMABProductTableViewCell.m */; };
+		7D7DCDC41AE55345008597C8 /* EMABSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD9D1AE55345008597C8 /* EMABSignupViewController.m */; };
+		7D7DCDC51AE55345008597C8 /* EMABUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCD9F1AE55345008597C8 /* EMABUser.m */; };
+		7D7DCDC61AE55345008597C8 /* EMABUserAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCDA11AE55345008597C8 /* EMABUserAccountTableViewController.m */; };
+		7D7DCDC71AE55345008597C8 /* EMABUserFavoriteHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCDA31AE55345008597C8 /* EMABUserFavoriteHistoryTableViewController.m */; };
+		7D7DCDC81AE55345008597C8 /* EMABUserOrderHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCDA51AE55345008597C8 /* EMABUserOrderHistoryTableViewController.m */; };
+		7D7DCDC91AE55345008597C8 /* EMABUserPaymentMethodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCDA71AE55345008597C8 /* EMABUserPaymentMethodTableViewController.m */; };
+		7D7DCDCA1AE55345008597C8 /* EMABUserProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCDA91AE55345008597C8 /* EMABUserProfileTableViewController.m */; };
+		7D7DCDCB1AE55345008597C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCDAA1AE55345008597C8 /* Images.xcassets */; };
+		7D7DCDCD1AE55345008597C8 /* LoginSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCDAC1AE55345008597C8 /* LoginSignup.storyboard */; };
+		7D7DCDCE1AE55345008597C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCDAD1AE55345008597C8 /* main.m */; };
+		7DCA05971ADEE1B800501623 /* Chapter1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA05961ADEE1B800501623 /* Chapter1Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DCA05911ADEE1B800501623 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DCA056C1ADEE1B800501623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DCA05731ADEE1B800501623;
+			remoteInfo = Chapter1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B90FA775D57D26A0C9EDF4F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7D7DCD711AE55345008597C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7D7DCD731AE55345008597C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D7DCD741AE55345008597C8 /* EMABAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABAppDelegate.h; sourceTree = "<group>"; };
+		7D7DCD751AE55345008597C8 /* EMABAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABAppDelegate.m; sourceTree = "<group>"; };
+		7D7DCD761AE55345008597C8 /* EMABBagTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABBagTableViewController.h; sourceTree = "<group>"; };
+		7D7DCD771AE55345008597C8 /* EMABBagTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABBagTableViewController.m; sourceTree = "<group>"; };
+		7D7DCD781AE55345008597C8 /* EMABCategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABCategoriesTableViewController.h; sourceTree = "<group>"; };
+		7D7DCD791AE55345008597C8 /* EMABCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABCategoriesTableViewController.m; sourceTree = "<group>"; };
+		7D7DCD7A1AE55345008597C8 /* EMABCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABCategory.h; sourceTree = "<group>"; };
+		7D7DCD7B1AE55345008597C8 /* EMABCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABCategory.m; sourceTree = "<group>"; };
+		7D7DCD7C1AE55345008597C8 /* EMABCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABCategoryTableViewCell.h; sourceTree = "<group>"; };
+		7D7DCD7D1AE55345008597C8 /* EMABCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABCategoryTableViewCell.m; sourceTree = "<group>"; };
+		7D7DCD7E1AE55345008597C8 /* EMABConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABConstants.h; sourceTree = "<group>"; };
+		7D7DCD7F1AE55345008597C8 /* EMABConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABConstants.m; sourceTree = "<group>"; };
+		7D7DCD801AE55345008597C8 /* EMABDispatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABDispatchViewController.h; sourceTree = "<group>"; };
+		7D7DCD811AE55345008597C8 /* EMABDispatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABDispatchViewController.m; sourceTree = "<group>"; };
+		7D7DCD821AE55345008597C8 /* EMABFavoriteProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABFavoriteProduct.h; sourceTree = "<group>"; };
+		7D7DCD831AE55345008597C8 /* EMABFavoriteProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABFavoriteProduct.m; sourceTree = "<group>"; };
+		7D7DCD841AE55345008597C8 /* EMABLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABLoginViewController.h; sourceTree = "<group>"; };
+		7D7DCD851AE55345008597C8 /* EMABLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABLoginViewController.m; sourceTree = "<group>"; };
+		7D7DCD861AE55345008597C8 /* EMABOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABOrder.h; sourceTree = "<group>"; };
+		7D7DCD871AE55345008597C8 /* EMABOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABOrder.m; sourceTree = "<group>"; };
+		7D7DCD881AE55345008597C8 /* EMABOrderHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABOrderHistoryTableViewCell.h; sourceTree = "<group>"; };
+		7D7DCD891AE55345008597C8 /* EMABOrderHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABOrderHistoryTableViewCell.m; sourceTree = "<group>"; };
+		7D7DCD8A1AE55345008597C8 /* EMABOrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABOrderItem.h; sourceTree = "<group>"; };
+		7D7DCD8B1AE55345008597C8 /* EMABOrderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABOrderItem.m; sourceTree = "<group>"; };
+		7D7DCD8C1AE55345008597C8 /* EMABOrderItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABOrderItemTableViewCell.h; sourceTree = "<group>"; };
+		7D7DCD8D1AE55345008597C8 /* EMABOrderItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABOrderItemTableViewCell.m; sourceTree = "<group>"; };
+		7D7DCD8E1AE55345008597C8 /* EMABPaymentMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABPaymentMethod.h; sourceTree = "<group>"; };
+		7D7DCD8F1AE55345008597C8 /* EMABPaymentMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPaymentMethod.m; sourceTree = "<group>"; };
+		7D7DCD901AE55345008597C8 /* EMABPaymentMethodTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABPaymentMethodTableViewCell.h; sourceTree = "<group>"; };
+		7D7DCD911AE55345008597C8 /* EMABPaymentMethodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPaymentMethodTableViewCell.m; sourceTree = "<group>"; };
+		7D7DCD921AE55345008597C8 /* EMABProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABProduct.h; sourceTree = "<group>"; };
+		7D7DCD931AE55345008597C8 /* EMABProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABProduct.m; sourceTree = "<group>"; };
+		7D7DCD941AE55345008597C8 /* EMABProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABProductDetailViewController.h; sourceTree = "<group>"; };
+		7D7DCD951AE55345008597C8 /* EMABProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABProductDetailViewController.m; sourceTree = "<group>"; };
+		7D7DCD961AE55345008597C8 /* EMABProductsFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABProductsFilterViewController.h; sourceTree = "<group>"; };
+		7D7DCD971AE55345008597C8 /* EMABProductsFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABProductsFilterViewController.m; sourceTree = "<group>"; };
+		7D7DCD981AE55345008597C8 /* EMABProductsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABProductsTableViewController.h; sourceTree = "<group>"; };
+		7D7DCD991AE55345008597C8 /* EMABProductsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABProductsTableViewController.m; sourceTree = "<group>"; };
+		7D7DCD9A1AE55345008597C8 /* EMABProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABProductTableViewCell.h; sourceTree = "<group>"; };
+		7D7DCD9B1AE55345008597C8 /* EMABProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABProductTableViewCell.m; sourceTree = "<group>"; };
+		7D7DCD9C1AE55345008597C8 /* EMABSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABSignupViewController.h; sourceTree = "<group>"; };
+		7D7DCD9D1AE55345008597C8 /* EMABSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABSignupViewController.m; sourceTree = "<group>"; };
+		7D7DCD9E1AE55345008597C8 /* EMABUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUser.h; sourceTree = "<group>"; };
+		7D7DCD9F1AE55345008597C8 /* EMABUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUser.m; sourceTree = "<group>"; };
+		7D7DCDA01AE55345008597C8 /* EMABUserAccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserAccountTableViewController.h; sourceTree = "<group>"; };
+		7D7DCDA11AE55345008597C8 /* EMABUserAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserAccountTableViewController.m; sourceTree = "<group>"; };
+		7D7DCDA21AE55345008597C8 /* EMABUserFavoriteHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserFavoriteHistoryTableViewController.h; sourceTree = "<group>"; };
+		7D7DCDA31AE55345008597C8 /* EMABUserFavoriteHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserFavoriteHistoryTableViewController.m; sourceTree = "<group>"; };
+		7D7DCDA41AE55345008597C8 /* EMABUserOrderHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserOrderHistoryTableViewController.h; sourceTree = "<group>"; };
+		7D7DCDA51AE55345008597C8 /* EMABUserOrderHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserOrderHistoryTableViewController.m; sourceTree = "<group>"; };
+		7D7DCDA61AE55345008597C8 /* EMABUserPaymentMethodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserPaymentMethodTableViewController.h; sourceTree = "<group>"; };
+		7D7DCDA71AE55345008597C8 /* EMABUserPaymentMethodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserPaymentMethodTableViewController.m; sourceTree = "<group>"; };
+		7D7DCDA81AE55345008597C8 /* EMABUserProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserProfileTableViewController.h; sourceTree = "<group>"; };
+		7D7DCDA91AE55345008597C8 /* EMABUserProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserProfileTableViewController.m; sourceTree = "<group>"; };
+		7D7DCDAA1AE55345008597C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7D7DCDAB1AE55345008597C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D7DCDAC1AE55345008597C8 /* LoginSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSignup.storyboard; sourceTree = "<group>"; };
+		7D7DCDAD1AE55345008597C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D7DCDCF1AE55382008597C8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7DCA05741ADEE1B800501623 /* Chapter7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter7.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCA05901ADEE1B800501623 /* Chapter7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chapter7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCA05951ADEE1B800501623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DCA05961ADEE1B800501623 /* Chapter1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chapter1Tests.m; sourceTree = "<group>"; };
+		80CF841F8F32251F599EA8BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C437999C984C6CDD9C62426C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DCA05711ADEE1B800501623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EAD9B8A878F50256630AFC0 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCA058D1ADEE1B800501623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50487B78628635A2FAEB4312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C437999C984C6CDD9C62426C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D7DCD6F1AE55345008597C8 /* Chapter7 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7DCD701AE55345008597C8 /* LaunchScreen.xib */,
+				7D7DCD721AE55345008597C8 /* Main.storyboard */,
+				7D7DCD741AE55345008597C8 /* EMABAppDelegate.h */,
+				7D7DCD751AE55345008597C8 /* EMABAppDelegate.m */,
+				7D7DCD761AE55345008597C8 /* EMABBagTableViewController.h */,
+				7D7DCD771AE55345008597C8 /* EMABBagTableViewController.m */,
+				7D7DCD781AE55345008597C8 /* EMABCategoriesTableViewController.h */,
+				7D7DCD791AE55345008597C8 /* EMABCategoriesTableViewController.m */,
+				7D7DCD7A1AE55345008597C8 /* EMABCategory.h */,
+				7D7DCD7B1AE55345008597C8 /* EMABCategory.m */,
+				7D7DCD7C1AE55345008597C8 /* EMABCategoryTableViewCell.h */,
+				7D7DCD7D1AE55345008597C8 /* EMABCategoryTableViewCell.m */,
+				7D7DCD7E1AE55345008597C8 /* EMABConstants.h */,
+				7D7DCD7F1AE55345008597C8 /* EMABConstants.m */,
+				7D7DCD801AE55345008597C8 /* EMABDispatchViewController.h */,
+				7D7DCD811AE55345008597C8 /* EMABDispatchViewController.m */,
+				7D7DCD821AE55345008597C8 /* EMABFavoriteProduct.h */,
+				7D7DCD831AE55345008597C8 /* EMABFavoriteProduct.m */,
+				7D7DCD841AE55345008597C8 /* EMABLoginViewController.h */,
+				7D7DCD851AE55345008597C8 /* EMABLoginViewController.m */,
+				7D7DCD861AE55345008597C8 /* EMABOrder.h */,
+				7D7DCD871AE55345008597C8 /* EMABOrder.m */,
+				7D7DCD881AE55345008597C8 /* EMABOrderHistoryTableViewCell.h */,
+				7D7DCD891AE55345008597C8 /* EMABOrderHistoryTableViewCell.m */,
+				7D7DCD8A1AE55345008597C8 /* EMABOrderItem.h */,
+				7D7DCD8B1AE55345008597C8 /* EMABOrderItem.m */,
+				7D7DCD8C1AE55345008597C8 /* EMABOrderItemTableViewCell.h */,
+				7D7DCD8D1AE55345008597C8 /* EMABOrderItemTableViewCell.m */,
+				7D7DCD8E1AE55345008597C8 /* EMABPaymentMethod.h */,
+				7D7DCD8F1AE55345008597C8 /* EMABPaymentMethod.m */,
+				7D7DCD901AE55345008597C8 /* EMABPaymentMethodTableViewCell.h */,
+				7D7DCD911AE55345008597C8 /* EMABPaymentMethodTableViewCell.m */,
+				7D7DCD921AE55345008597C8 /* EMABProduct.h */,
+				7D7DCD931AE55345008597C8 /* EMABProduct.m */,
+				7D7DCD941AE55345008597C8 /* EMABProductDetailViewController.h */,
+				7D7DCD951AE55345008597C8 /* EMABProductDetailViewController.m */,
+				7D7DCD961AE55345008597C8 /* EMABProductsFilterViewController.h */,
+				7D7DCD971AE55345008597C8 /* EMABProductsFilterViewController.m */,
+				7D7DCD981AE55345008597C8 /* EMABProductsTableViewController.h */,
+				7D7DCD991AE55345008597C8 /* EMABProductsTableViewController.m */,
+				7D7DCD9A1AE55345008597C8 /* EMABProductTableViewCell.h */,
+				7D7DCD9B1AE55345008597C8 /* EMABProductTableViewCell.m */,
+				7D7DCD9C1AE55345008597C8 /* EMABSignupViewController.h */,
+				7D7DCD9D1AE55345008597C8 /* EMABSignupViewController.m */,
+				7D7DCD9E1AE55345008597C8 /* EMABUser.h */,
+				7D7DCD9F1AE55345008597C8 /* EMABUser.m */,
+				7D7DCDA01AE55345008597C8 /* EMABUserAccountTableViewController.h */,
+				7D7DCDA11AE55345008597C8 /* EMABUserAccountTableViewController.m */,
+				7D7DCDA21AE55345008597C8 /* EMABUserFavoriteHistoryTableViewController.h */,
+				7D7DCDA31AE55345008597C8 /* EMABUserFavoriteHistoryTableViewController.m */,
+				7D7DCDA41AE55345008597C8 /* EMABUserOrderHistoryTableViewController.h */,
+				7D7DCDA51AE55345008597C8 /* EMABUserOrderHistoryTableViewController.m */,
+				7D7DCDA61AE55345008597C8 /* EMABUserPaymentMethodTableViewController.h */,
+				7D7DCDA71AE55345008597C8 /* EMABUserPaymentMethodTableViewController.m */,
+				7D7DCDA81AE55345008597C8 /* EMABUserProfileTableViewController.h */,
+				7D7DCDA91AE55345008597C8 /* EMABUserProfileTableViewController.m */,
+				7D7DCDAA1AE55345008597C8 /* Images.xcassets */,
+				7D7DCDAB1AE55345008597C8 /* Info.plist */,
+				7D7DCDAC1AE55345008597C8 /* LoginSignup.storyboard */,
+				7D7DCDAD1AE55345008597C8 /* main.m */,
+			);
+			path = Chapter7;
+			sourceTree = "<group>";
+		};
+		7DCA056B1ADEE1B800501623 = {
+			isa = PBXGroup;
+			children = (
+				7D7DCDCF1AE55382008597C8 /* Default-568h@2x.png */,
+				7D7DCD6F1AE55345008597C8 /* Chapter7 */,
+				7DCA05931ADEE1B800501623 /* Chapter1Tests */,
+				7DCA05751ADEE1B800501623 /* Products */,
+				E5D85610AB38869682929626 /* Pods */,
+				50487B78628635A2FAEB4312 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7DCA05751ADEE1B800501623 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DCA05741ADEE1B800501623 /* Chapter7.app */,
+				7DCA05901ADEE1B800501623 /* Chapter7Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DCA05931ADEE1B800501623 /* Chapter1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7DCA05961ADEE1B800501623 /* Chapter1Tests.m */,
+				7DCA05941ADEE1B800501623 /* Supporting Files */,
+			);
+			path = Chapter1Tests;
+			sourceTree = "<group>";
+		};
+		7DCA05941ADEE1B800501623 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DCA05951ADEE1B800501623 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5D85610AB38869682929626 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B90FA775D57D26A0C9EDF4F /* Pods.debug.xcconfig */,
+				80CF841F8F32251F599EA8BA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DCA05731ADEE1B800501623 /* Chapter7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCA059A1ADEE1B800501623 /* Build configuration list for PBXNativeTarget "Chapter7" */;
+			buildPhases = (
+				159263BA4AA8E96F9AD925A1 /* Check Pods Manifest.lock */,
+				7DCA05701ADEE1B800501623 /* Sources */,
+				7DCA05711ADEE1B800501623 /* Frameworks */,
+				7DCA05721ADEE1B800501623 /* Resources */,
+				3747D7040ED1937C18F6F1F4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter7;
+			productName = Chapter1;
+			productReference = 7DCA05741ADEE1B800501623 /* Chapter7.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DCA058F1ADEE1B800501623 /* Chapter7Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCA059D1ADEE1B800501623 /* Build configuration list for PBXNativeTarget "Chapter7Tests" */;
+			buildPhases = (
+				7DCA058C1ADEE1B800501623 /* Sources */,
+				7DCA058D1ADEE1B800501623 /* Frameworks */,
+				7DCA058E1ADEE1B800501623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DCA05921ADEE1B800501623 /* PBXTargetDependency */,
+			);
+			name = Chapter7Tests;
+			productName = Chapter1Tests;
+			productReference = 7DCA05901ADEE1B800501623 /* Chapter7Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DCA056C1ADEE1B800501623 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Liangjun Jiang";
+				TargetAttributes = {
+					7DCA05731ADEE1B800501623 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					7DCA058F1ADEE1B800501623 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 7DCA05731ADEE1B800501623;
+					};
+				};
+			};
+			buildConfigurationList = 7DCA056F1ADEE1B800501623 /* Build configuration list for PBXProject "Chapter7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DCA056B1ADEE1B800501623;
+			productRefGroup = 7DCA05751ADEE1B800501623 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DCA05731ADEE1B800501623 /* Chapter7 */,
+				7DCA058F1ADEE1B800501623 /* Chapter7Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DCA05721ADEE1B800501623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7DCDAE1AE55345008597C8 /* LaunchScreen.xib in Resources */,
+				7D7DCDCB1AE55345008597C8 /* Images.xcassets in Resources */,
+				7D7DCDCD1AE55345008597C8 /* LoginSignup.storyboard in Resources */,
+				7D7DCDAF1AE55345008597C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCA058E1ADEE1B800501623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		159263BA4AA8E96F9AD925A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3747D7040ED1937C18F6F1F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DCA05701ADEE1B800501623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7DCDB91AE55345008597C8 /* EMABOrder.m in Sources */,
+				7D7DCDC41AE55345008597C8 /* EMABSignupViewController.m in Sources */,
+				7D7DCDB21AE55345008597C8 /* EMABCategoriesTableViewController.m in Sources */,
+				7D7DCDBF1AE55345008597C8 /* EMABProduct.m in Sources */,
+				7D7DCDBD1AE55345008597C8 /* EMABPaymentMethod.m in Sources */,
+				7D7DCDC71AE55345008597C8 /* EMABUserFavoriteHistoryTableViewController.m in Sources */,
+				7D7DCDB61AE55345008597C8 /* EMABDispatchViewController.m in Sources */,
+				7D7DCDC31AE55345008597C8 /* EMABProductTableViewCell.m in Sources */,
+				7D7DCDC21AE55345008597C8 /* EMABProductsTableViewController.m in Sources */,
+				7D7DCDBE1AE55345008597C8 /* EMABPaymentMethodTableViewCell.m in Sources */,
+				7D7DCDB11AE55345008597C8 /* EMABBagTableViewController.m in Sources */,
+				7D7DCDC01AE55345008597C8 /* EMABProductDetailViewController.m in Sources */,
+				7D7DCDB41AE55345008597C8 /* EMABCategoryTableViewCell.m in Sources */,
+				7D7DCDC81AE55345008597C8 /* EMABUserOrderHistoryTableViewController.m in Sources */,
+				7D7DCDBA1AE55345008597C8 /* EMABOrderHistoryTableViewCell.m in Sources */,
+				7D7DCDBC1AE55345008597C8 /* EMABOrderItemTableViewCell.m in Sources */,
+				7D7DCDB01AE55345008597C8 /* EMABAppDelegate.m in Sources */,
+				7D7DCDC91AE55345008597C8 /* EMABUserPaymentMethodTableViewController.m in Sources */,
+				7D7DCDC11AE55345008597C8 /* EMABProductsFilterViewController.m in Sources */,
+				7D7DCDC61AE55345008597C8 /* EMABUserAccountTableViewController.m in Sources */,
+				7D7DCDB51AE55345008597C8 /* EMABConstants.m in Sources */,
+				7D7DCDCA1AE55345008597C8 /* EMABUserProfileTableViewController.m in Sources */,
+				7D7DCDB71AE55345008597C8 /* EMABFavoriteProduct.m in Sources */,
+				7D7DCDBB1AE55345008597C8 /* EMABOrderItem.m in Sources */,
+				7D7DCDB31AE55345008597C8 /* EMABCategory.m in Sources */,
+				7D7DCDC51AE55345008597C8 /* EMABUser.m in Sources */,
+				7D7DCDCE1AE55345008597C8 /* main.m in Sources */,
+				7D7DCDB81AE55345008597C8 /* EMABLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCA058C1ADEE1B800501623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCA05971ADEE1B800501623 /* Chapter1Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DCA05921ADEE1B800501623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DCA05731ADEE1B800501623 /* Chapter7 */;
+			targetProxy = 7DCA05911ADEE1B800501623 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D7DCD701AE55345008597C8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D7DCD711AE55345008597C8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7D7DCD721AE55345008597C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D7DCD731AE55345008597C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DCA05981ADEE1B800501623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7DCA05991ADEE1B800501623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DCA059B1ADEE1B800501623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B90FA775D57D26A0C9EDF4F /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "\"$(PODS_ROOT)/Parse\"";
+				INFOPLIST_FILE = "$(SRCROOT)/Chapter7/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Chapter7;
+			};
+			name = Debug;
+		};
+		7DCA059C1ADEE1B800501623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80CF841F8F32251F599EA8BA /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "\"$(PODS_ROOT)/Parse\"";
+				INFOPLIST_FILE = "$(SRCROOT)/Chapter7/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Chapter7;
+			};
+			name = Release;
+		};
+		7DCA059E1ADEE1B800501623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Chapter1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = Chapter7Tests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chapter1.app/Chapter1";
+			};
+			name = Debug;
+		};
+		7DCA059F1ADEE1B800501623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Chapter1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = Chapter7Tests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chapter1.app/Chapter1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DCA056F1ADEE1B800501623 /* Build configuration list for PBXProject "Chapter7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCA05981ADEE1B800501623 /* Debug */,
+				7DCA05991ADEE1B800501623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCA059A1ADEE1B800501623 /* Build configuration list for PBXNativeTarget "Chapter7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCA059B1ADEE1B800501623 /* Debug */,
+				7DCA059C1ADEE1B800501623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCA059D1ADEE1B800501623 /* Build configuration list for PBXNativeTarget "Chapter7Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCA059E1ADEE1B800501623 /* Debug */,
+				7DCA059F1ADEE1B800501623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DCA056C1ADEE1B800501623 /* Project object */;
+}
