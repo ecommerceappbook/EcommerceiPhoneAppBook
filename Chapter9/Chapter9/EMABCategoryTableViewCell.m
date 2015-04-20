@@ -8,6 +8,7 @@
 
 #import "EMABCategoryTableViewCell.h"
 #import <ParseUI/PFImageView.h>
+#import "EMABCategory.h"
 
 @interface EMABCategoryTableViewCell()
 @property (nonatomic, weak) IBOutlet PFImageView *backgroundImageView;
@@ -19,7 +20,14 @@
 
 -(void)configureItem:(EMABCategory *)item
 {
-    
+    self.titleLabel.text = item.title;
+    self.backgroundImageView.image = nil;
+    if (item.image) {
+        self.backgroundImageView.file = item.image;
+        [self.backgroundImageView loadInBackground];
+    } else {
+        self.backgroundImageView.image = [UIImage imageNamed:@"category_cell_default_background"];
+    }
     
 }
 
