@@ -13,10 +13,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *priceLabel;
 @property (nonatomic, weak) IBOutlet PFImageView *thumbnailImageView;
-
-
 @end
-
 
 @implementation EMABProductTableViewCell
 
