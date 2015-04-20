@@ -8,13 +8,13 @@
 
 #import "EMABCategory.h"
 #import  <Parse/PFObject+Subclass.h>
-
+#import "EMABConstants.h"
 @implementation EMABCategory
 @dynamic title, image;
 
 +(NSString *)parseClassName
 {
-    return @"Category";
+    return kCategory;
 }
 
 +(PFQuery *)basicQuery{

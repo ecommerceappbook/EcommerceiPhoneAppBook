@@ -18,6 +18,9 @@ extern NSString *const kStripeLivePublishableKey;
 extern NSString *const kStripeLiveSecretKey; //will not be used in this Xcode project
 extern NSString *const kMailgunAPIKey;
 
+extern NSString *const kCategory;
+extern NSString *const kProduct;
+
 
 @interface EMABConstants : NSObject
 

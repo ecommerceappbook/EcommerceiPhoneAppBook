@@ -16,6 +16,8 @@ NSString *const kStripeLivePublishableKey = @"YOUR-STRIPE-LIVE-PUBLISHABLE-KEY";
 NSString *const kStripeLiveSecretKey = @"YOUR-STRIPE-LIVE-SECRET-KEY";
 NSString *const kMailgunAPIKey = @"YOUR-MAILGUN-API-KEY";
 
+NSString *const kCategory = @"Category";
+NSString *const kProduct = @"Product";
 
 @implementation EMABConstants
 
