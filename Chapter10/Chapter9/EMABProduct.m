@@ -33,4 +33,11 @@
 -(NSString *)friendlyPrice{
     return [NSString localizedStringWithFormat:@"$ %.2f/%@", self.price, self.priceUnit];
 }
+
++(PFQuery *)queryForCategory:(EMABCategory *)brand keyword:(NSString *)keyword
+{
+    PFQuery *query = [self queryForCategory:brand];
+    [query whereKey:@"name" containsString:keyword];
+    return query;
+}
 @end

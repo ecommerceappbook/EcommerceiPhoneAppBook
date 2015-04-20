@@ -12,8 +12,9 @@
 #import "EMABProduct.h"
 #import "EMABProductTableViewCell.h"
 #import "EMABProductDetailViewController.h"
-@interface EMABProductsTableViewController()
+@interface EMABProductsTableViewController()<UISearchBarDelegate>
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, copy) NSString *keyword;
 @end;
 
 @implementation EMABProductsTableViewController
@@ -30,6 +31,7 @@
     [super awakeFromNib];
     self.parseClassName = kProduct;
     self.objectsPerPage = 20;
+    self.paginationEnabled = YES;
     self.pullToRefreshEnabled = YES;
 }
 
@@ -39,6 +41,10 @@
 
 - (PFQuery *)queryForTable {
     PFQuery *query = [EMABProduct queryForCategory:self.brand];
+
+    if (self.keyword) {
+        query = [EMABProduct queryForCategory:self.brand keyword:self.keyword];
+    }
     if ([self.objects count] == 0) {
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
@@ -70,5 +76,22 @@
         [viewController setProduct:(EMABProduct*)[self objectAtIndexPath:indexPath]];
         [self.navigationController pushViewController:viewController animated:YES];
     }
+}
+
+#pragma mark - searchbar delegate
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    if ([searchBar.text length] > 0) {
+        [searchBar resignFirstResponder];
+        self.keyword = searchBar.text;
+        [self clear];
+        [self loadObjects];
+    }
+}
+
+#pragma  mark - scrollview Delegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.searchBar resignFirstResponder];
 }
 @end

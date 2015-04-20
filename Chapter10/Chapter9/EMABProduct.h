@@ -21,4 +21,7 @@
 +(PFQuery *)queryForCategory:(EMABCategory *)brand;
 
 -(NSString *)friendlyPrice;
+
++(PFQuery *)queryForCategory:(EMABCategory *)brand keyword:(NSString *)keyword;
+
 @end

@@ -17,6 +17,7 @@
     [super awakeFromNib];
     self.parseClassName = kCategory;
     self.objectsPerPage = 10;
+    self.paginationEnabled = YES;
     self.pullToRefreshEnabled = YES;
 }
 
