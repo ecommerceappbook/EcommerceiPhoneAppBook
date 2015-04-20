@@ -12,7 +12,11 @@
 #import "EMABProduct.h"
 #import "EMABProductTableViewCell.h"
 #import "EMABProductDetailViewController.h"
-@interface EMABProductsTableViewController()<UISearchBarDelegate>
+#import "EMABProductsFilterViewController.h"
+@interface EMABProductsTableViewController()<UISearchBarDelegate>{
+    float minPrice;
+    float maxPrice;
+}
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, copy) NSString *keyword;
 @end;
@@ -37,6 +41,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    minPrice = 0.0;
+    maxPrice = 0.0;
 }
 
 - (PFQuery *)queryForTable {
@@ -45,10 +51,35 @@
     if (self.keyword) {
         query = [EMABProduct queryForCategory:self.brand keyword:self.keyword];
     }
+    
+    if (minPrice > 0 && maxPrice > 0) {
+        query = [EMABProduct queryForCategory:self.brand minPrice:minPrice maxPrice:maxPrice];
+    }
+    
     if ([self.objects count] == 0) {
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     return query;
+}
+
+#pragma mark - IBAction
+-(IBAction)onFilter:(id)sender
+{
+    EMABProductsFilterViewController *viewController = (EMABProductsFilterViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"EMABProductsFilterViewController"];
+    viewController.cancelBlock = ^(EMABProductsFilterViewController *viewController){
+      
+    };
+    viewController.finishBlock = ^(EMABProductsFilterViewController *viewControlle, float minValue, float maxValue){
+        minPrice = minValue;
+        maxPrice = maxValue;
+        self.keyword = nil;
+        [self clear];
+        [self loadObjects];
+    };
+    
+    [self.navigationController presentViewController:viewController animated:YES completion:nil];
+    
+    
 }
 
 #pragma mark - Table View

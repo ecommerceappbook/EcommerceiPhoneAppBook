@@ -8,7 +8,13 @@
 
 #import "EMABProductsFilterViewController.h"
 
-@interface EMABProductsFilterViewController ()
+@interface EMABProductsFilterViewController (){
+    float minPrice;
+    float maxPrice;
+}
+
+@property (nonatomic, weak) IBOutlet UILabel *minLabel;
+@property (nonatomic, weak) IBOutlet UILabel *maxLabel;
 
 @end
 
@@ -16,22 +22,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    minPrice = 0.0;
+    maxPrice = 0.0;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(IBAction)onSlider:(id)sender{
+    UISlider *slider = (UISlider *)sender;
+    NSString *friendlySliderValue = [NSString stringWithFormat:@"%.0f",slider.value];;
+    if (slider.tag == 99) {
+        minPrice = slider.value;
+        self.minLabel.text = friendlySliderValue;
+    } else {
+        maxPrice = slider.value;
+        self.maxLabel.text = friendlySliderValue;
+    }
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(IBAction)onCancel:(id)sender{
+    self.cancelBlock(self);
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
+-(IBAction)onDone:(id)sender{
+    self.finishBlock(self, minPrice, maxPrice);
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

@@ -24,4 +24,7 @@
 
 +(PFQuery *)queryForCategory:(EMABCategory *)brand keyword:(NSString *)keyword;
 
++(PFQuery *)queryForCategory:(EMABCategory *)brand minPrice:(float)min maxPrice:(float)max;
+
+
 @end

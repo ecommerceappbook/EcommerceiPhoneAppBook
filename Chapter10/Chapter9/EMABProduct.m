@@ -40,4 +40,11 @@
     [query whereKey:@"name" containsString:keyword];
     return query;
 }
+
++(PFQuery *)queryForCategory:(EMABCategory *)brand minPrice:(float)min maxPrice:(float)max{
+    PFQuery *query = [self queryForCategory:brand];
+    [query whereKey:@"price" greaterThanOrEqualTo:@(min)];
+    [query whereKey:@"price" lessThanOrEqualTo:@(max)];
+    return query;
+}
 @end

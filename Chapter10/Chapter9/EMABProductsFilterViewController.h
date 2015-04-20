@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class EMABProductsFilterViewController;
+typedef void (^ViewControllerDidFinish)(EMABProductsFilterViewController *viewController, float minPrice, float maxPrice);
+typedef void (^ViewControllerDidCancel)(EMABProductsFilterViewController *viewController);
 
 @interface EMABProductsFilterViewController : UIViewController
+@property (nonatomic, copy) ViewControllerDidFinish finishBlock;
+@property (nonatomic, copy) ViewControllerDidCancel cancelBlock;
 
 @end

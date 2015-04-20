@@ -653,8 +653,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="lVI-JD-Wsf">
+                            <slider opaque="NO" tag="99" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="lVI-JD-Wsf">
                                 <rect key="frame" x="94" y="124" width="118" height="31"/>
+                                <connections>
+                                    <action selector="onSlider:" destination="5iU-wv-LLi" eventType="valueChanged" id="x1o-Xs-m8y"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RR-6T-X1F">
                                 <rect key="frame" x="51" y="85" width="81" height="21"/>
@@ -668,8 +671,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="daD-Qr-IPx">
+                            <slider opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="daD-Qr-IPx">
                                 <rect key="frame" x="94" y="191" width="118" height="31"/>
+                                <connections>
+                                    <action selector="onSlider:" destination="5iU-wv-LLi" eventType="valueChanged" id="GYN-HU-zfo"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1000.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSJ-Iz-S4j">
                                 <rect key="frame" x="234" y="196" width="76" height="21"/>
@@ -712,11 +718,23 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Price Filter" id="WxP-ri-gxH">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kgF-em-IQ3"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="EXE-Cu-JLV"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kgF-em-IQ3">
+                            <connections>
+                                <action selector="onCancel:" destination="5iU-wv-LLi" id="vSe-d7-SMB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="EXE-Cu-JLV">
+                            <connections>
+                                <action selector="onDone:" destination="5iU-wv-LLi" id="nl6-ak-dfT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="maxLabel" destination="Z5A-6L-Hu1" id="7c4-Xw-6ad"/>
+                        <outlet property="minLabel" destination="Fqh-4h-ByD" id="ntF-Wv-0wS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hJ-fi-gvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
