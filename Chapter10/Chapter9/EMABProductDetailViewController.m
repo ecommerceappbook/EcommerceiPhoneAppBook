@@ -7,7 +7,7 @@
 //
 
 #import "EMABProductDetailViewController.h"
-
+#import "EMABProduct.h"
 @interface EMABProductDetailViewController ()
 
 @end

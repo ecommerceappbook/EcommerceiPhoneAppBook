@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class EMABProduct;
 @interface EMABProductDetailViewController : UIViewController
+
+@property (nonatomic, strong) EMABProduct *product;
 
 @end
