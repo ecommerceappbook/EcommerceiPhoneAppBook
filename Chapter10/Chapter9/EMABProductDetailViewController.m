@@ -24,6 +24,8 @@
 -(void)setProduct:(EMABProduct *)product{
     if (_product !=product) {
         _product = product;
+        
+        [self updateUI];
     }
     
 }
@@ -31,6 +33,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self updateUI];
+}
+
+-(void)updateUI{
+    if (self.product.fullsizeImage) {
+       self.fullsizeImageView.file = self.product.fullsizeImage;
+    }
+    
+    [self.fullsizeImageView loadInBackground];
+    self.productNameLabel.text = self.product.name;
+    self.productPriceLabel.text = [self.product friendlyPrice];
+    self.detailTextView.text = [self.product detail];
 }
 
 
