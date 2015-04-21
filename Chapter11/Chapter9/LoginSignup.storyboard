@@ -60,6 +60,10 @@
                                     <action selector="onFacebookLogin:" destination="9fa-mp-1Kr" eventType="touchUpInside" id="aQ8-Ap-Zl4"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qXW-FU-iPE">
+                                <rect key="frame" x="150" y="372" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -71,6 +75,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="qXW-FU-iPE" id="Iju-Ep-aRw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hfr-KG-Pah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
