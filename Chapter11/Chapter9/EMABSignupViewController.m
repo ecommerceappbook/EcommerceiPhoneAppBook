@@ -8,6 +8,8 @@
 
 #import "EMABSignupViewController.h"
 #import "EMABConstants.h"
+#import "EMABEmailTextField.h"
+#import "EMABPasswordTextField.h"
 #import "EMABUser.h"
 @interface EMABSignupViewController ()<UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate>
 @property (nonatomic, strong) UITextField *emailTextField;
@@ -18,92 +20,16 @@
 
 @implementation EMABSignupViewController
 
-- (UITextField *)emailTextField
-{
-    if (_emailTextField == nil)
-    {
-        CGRect frame = CGRectMake(kLeftMargin, 8.0, kTextFieldWidth, kTextFieldHeight);
-        _emailTextField = [[UITextField alloc] initWithFrame:frame];
-        
-        self.emailTextField.borderStyle = UITextBorderStyleNone;
-        self.emailTextField.textColor = [UIColor blackColor];
-        self.emailTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-        self.emailTextField.placeholder = NSLocalizedString(@"Email", @"");
-        self.emailTextField.backgroundColor = [UIColor whiteColor];
-        self.emailTextField.autocorrectionType = UITextAutocorrectionTypeNo;	// no auto correction support
-        
-        self.emailTextField.keyboardType = UIKeyboardTypeEmailAddress;	// use the default type input method (entire keyboard)
-        self.emailTextField.returnKeyType = UIReturnKeyDone;
-        
-        self.emailTextField.clearButtonMode = UITextFieldViewModeWhileEditing;	// has a clear 'x' button to the right
-        
-        self.emailTextField.tag = 0;		// tag this control so we can remove it later for recycled cells
-        
-        self.emailTextField.delegate = self;	// let us be the delegate so we know when the keyboard's "Done" button is pressed
-        
-        // Add an accessibility label that describes what the text field is for.
-        [self.emailTextField setAccessibilityLabel:NSLocalizedString(@"Email", @"")];
-    }
-    return _emailTextField;
-}
-
-- (UITextField *)passwordTextField
-{
-    if (_passwordTextField == nil)
-    {
-        CGRect frame = CGRectMake(kLeftMargin, kTopMargin, kTextFieldWidth, kTextFieldHeight);
-        self.passwordTextField = [[UITextField alloc] initWithFrame:frame];
-        self.passwordTextField.borderStyle = UITextBorderStyleNone;
-        self.passwordTextField.textColor = [UIColor blackColor];
-        self.passwordTextField.placeholder = NSLocalizedString(@"Password",@"");
-        self.passwordTextField.backgroundColor = [UIColor whiteColor];
-        
-        self.passwordTextField.keyboardType = UIKeyboardTypeDefault;
-        self.passwordTextField.returnKeyType = UIReturnKeyDone;
-        self.passwordTextField.secureTextEntry = YES;	// make the text entry secure (bullets)
-        
-        self.passwordTextField.clearButtonMode = UITextFieldViewModeWhileEditing;	// has a clear 'x' button to the right
-        
-        self.passwordTextField.tag = 1;		// tag this control so we can remove it later for recycled cells
-        
-        self.passwordTextField.delegate = self;	// let us be the delegate so we know when the keyboard's "Done" button is pressed
-        
-        // Add an accessibility label that describes what the text field is for.
-        [self.passwordTextField setAccessibilityLabel:NSLocalizedString(@"Password", @"")];
-    }
-    return _passwordTextField;
-}
-
-- (UITextField *)passwordAgainTextField
-{
-    if (_passwordAgainTextField == nil)
-    {
-        CGRect frame = CGRectMake(kLeftMargin, kTopMargin, kTextFieldWidth, kTextFieldHeight);
-        self.passwordAgainTextField = [[UITextField alloc] initWithFrame:frame];
-        self.passwordAgainTextField.borderStyle = UITextBorderStyleNone;
-        self.passwordAgainTextField.textColor = [UIColor blackColor];
-        self.passwordAgainTextField.placeholder = NSLocalizedString(@"Password Again",@"");
-        self.passwordAgainTextField.backgroundColor = [UIColor whiteColor];
-        
-        self.passwordAgainTextField.keyboardType = UIKeyboardTypeDefault;
-        self.passwordAgainTextField.returnKeyType = UIReturnKeyDone;
-        self.passwordAgainTextField.secureTextEntry = YES;	// make the text entry secure (bullets)
-        
-        self.passwordAgainTextField.clearButtonMode = UITextFieldViewModeWhileEditing;	// has a clear 'x' button to the right
-        
-        self.passwordAgainTextField.tag = 2;		// tag this control so we can remove it later for recycled cells
-        
-        self.passwordAgainTextField.delegate = self;	// let us be the delegate so we know when the keyboard's "Done" button is pressed
-        
-        // Add an accessibility label that describes what the text field is for.
-        [self.passwordAgainTextField setAccessibilityLabel:NSLocalizedString(@"Password Again", @"")];
-    }
-    return _passwordAgainTextField;
-}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.emailTextField = [[EMABEmailTextField alloc] initWithFrame:CGRectMake(kLeftMargin, kTopMargin, kTextFieldWidth, kTextFieldHeight)];
+    self.passwordTextField = [[EMABPasswordTextField alloc] initWithFrame:CGRectMake(kLeftMargin, kTopMargin, kTextFieldWidth, kTextFieldHeight)];
+    self.passwordAgainTextField = [[EMABPasswordTextField alloc] initWithFrame:CGRectMake(kLeftMargin, kTopMargin, kTextFieldWidth, kTextFieldHeight)];
+    [self.passwordAgainTextField setPlaceholder:NSLocalizedString(@"Password Again", @"Password Again")];
+    
 }
 
 
@@ -112,7 +38,7 @@
     BOOL cont1 = [self.passwordAgainTextField.text length] > kMinTextLength;
     BOOL cont2 = [self.passwordTextField.text isEqualToString:self.passwordAgainTextField.text];
     BOOL cont3 = [self.emailTextField.text length] > kMinTextLength;
-    BOOL cont4 = [self isValidEmail];
+    BOOL cont4 = [EMABConstants isValidEmail:self.emailTextField.text];
     
     if (!cont0) {
         [self showWarning:NSLocalizedString(@"Password at least 6 characters.", @"Password at least 6 characters.")];
@@ -132,6 +58,9 @@
     }
     
     if (cont0 && cont1 && cont2 && cont3 && cont4) {
+        [self.emailTextField resignFirstResponder];
+        [self.passwordTextField resignFirstResponder];
+        [self.passwordAgainTextField resignFirstResponder];
         EMABUser *user = (EMABUser *)[PFUser user];
         user.username = [self.emailTextField text];
         user.email = [self.emailTextField text];
@@ -197,13 +126,6 @@
 
 
 #pragma mark - helper
--(BOOL)isValidEmail {
-    //https://github.com/benmcredmond/DHValidation
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:self.emailTextField.text];
-}
-
 -(void)showWarning:(NSString *)message {
     [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Warning") message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil , nil] show];
 }

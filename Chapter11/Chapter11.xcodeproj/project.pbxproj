@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1B21111AE6AA71001D869F /* EMABEmailTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21101AE6AA71001D869F /* EMABEmailTextField.m */; };
+		7D1B21141AE6AA8E001D869F /* EMABPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21131AE6AA8E001D869F /* EMABPasswordTextField.m */; };
 		7D7DCCED1AE54EE4008597C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCCEC1AE54EE4008597C8 /* main.m */; };
 		7D7DCCF91AE54EE4008597C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCCF71AE54EE4008597C8 /* Main.storyboard */; };
 		7D7DCCFE1AE54EE4008597C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCCFC1AE54EE4008597C8 /* LaunchScreen.xib */; };
@@ -56,6 +58,10 @@
 
 /* Begin PBXFileReference section */
 		27DB3EC5DE74105DE5361C8C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7D1B210F1AE6AA71001D869F /* EMABEmailTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABEmailTextField.h; sourceTree = "<group>"; };
+		7D1B21101AE6AA71001D869F /* EMABEmailTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABEmailTextField.m; sourceTree = "<group>"; };
+		7D1B21121AE6AA8E001D869F /* EMABPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABPasswordTextField.h; sourceTree = "<group>"; };
+		7D1B21131AE6AA8E001D869F /* EMABPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPasswordTextField.m; sourceTree = "<group>"; };
 		7D7DCCE71AE54EE4008597C8 /* Chapter11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7DCCEB1AE54EE4008597C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7DCCEC1AE54EE4008597C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -253,6 +259,10 @@
 				7D7DCD331AE54FF5008597C8 /* EMABPaymentMethodTableViewCell.m */,
 				7D7DCD1E1AE54FF5008597C8 /* EMABCategoryTableViewCell.h */,
 				7D7DCD1F1AE54FF5008597C8 /* EMABCategoryTableViewCell.m */,
+				7D1B210F1AE6AA71001D869F /* EMABEmailTextField.h */,
+				7D1B21101AE6AA71001D869F /* EMABEmailTextField.m */,
+				7D1B21121AE6AA8E001D869F /* EMABPasswordTextField.h */,
+				7D1B21131AE6AA8E001D869F /* EMABPasswordTextField.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -436,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1B21111AE6AA71001D869F /* EMABEmailTextField.m in Sources */,
 				7D7DCD691AE54FF5008597C8 /* EMABUserProfileTableViewController.m in Sources */,
 				7D7DCD501AE54FF5008597C8 /* EMABBagTableViewController.m in Sources */,
 				7D7DCD5F1AE54FF5008597C8 /* EMABProductDetailViewController.m in Sources */,
@@ -452,6 +463,7 @@
 				7D7DCD591AE54FF5008597C8 /* EMABOrderHistoryTableViewCell.m in Sources */,
 				7D7DCD661AE54FF5008597C8 /* EMABUserFavoriteHistoryTableViewController.m in Sources */,
 				7D7DCD621AE54FF5008597C8 /* EMABProductTableViewCell.m in Sources */,
+				7D1B21141AE6AA8E001D869F /* EMABPasswordTextField.m in Sources */,
 				7D7DCD5A1AE54FF5008597C8 /* EMABOrderItem.m in Sources */,
 				7D7DCD5C1AE54FF5008597C8 /* EMABPaymentMethod.m in Sources */,
 				7D7DCD571AE54FF5008597C8 /* EMABLoginViewController.m in Sources */,

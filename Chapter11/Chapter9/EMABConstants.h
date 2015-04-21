@@ -29,4 +29,5 @@ extern float const kTopMargin;
 
 @interface EMABConstants : NSObject
 
++(BOOL)isValidEmail:(NSString *)emailAdress;
 @end
