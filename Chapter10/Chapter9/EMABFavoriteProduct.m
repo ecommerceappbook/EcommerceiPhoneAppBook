@@ -9,7 +9,6 @@
 #import "EMABFavoriteProduct.h"
 #import  <Parse/PFObject+Subclass.h>
 #import "EMABConstants.h"
-#import "EMABUser.h"
 #import "EMABProduct.h"
 @implementation EMABFavoriteProduct
 @dynamic customer, product;

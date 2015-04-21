@@ -7,12 +7,11 @@
 //
 
 #import <Parse/Parse.h>
-
 @class EMABProduct;
 @interface EMABFavoriteProduct : PFObject<PFSubclassing>
 @property (nonatomic, strong) PFUser *customer;
 @property (nonatomic, strong) EMABProduct *product;
-
 +(PFQuery *)basicQuery;
++(PFQuery *)queryForCustomer:(PFUser *)customer;
 +(PFQuery *)queryForCustomer:(PFUser *)customer product:(EMABProduct *)product;
 @end

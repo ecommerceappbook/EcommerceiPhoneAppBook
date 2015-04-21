@@ -62,8 +62,22 @@
     if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self showWarning];
     } else {
-        //todo:
+        EMABFavoriteProduct *favoriteProduct = [EMABFavoriteProduct object];
+        [favoriteProduct setCustomer:[PFUser currentUser]];
+        [favoriteProduct setProduct:self.product];
+        [favoriteProduct saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+            if (!error) {
+                 [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", @"Success") message:NSLocalizedString(@"Successfully added", @"") delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil, nil] show];
+            }
+        }];
     }
+}
+
+
+-(IBAction)onShare:(id)sender {
+    
+    
+    
 }
 
 #pragma mark - helper
