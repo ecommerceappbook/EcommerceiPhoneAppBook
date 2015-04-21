@@ -7,7 +7,12 @@
 //
 
 #import "EMABUser.h"
-
+#import  <Parse/PFObject+Subclass.h>
 @implementation EMABUser
+@dynamic firstName, lastName, gender, phone, address1, address2, city, state, zipcode, photo;
+
++(EMABUser *)currentUser{
+    return (EMABUser *)[PFUser currentUser];
+}
 
 @end

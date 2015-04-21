@@ -56,12 +56,12 @@
 
 /* Begin PBXFileReference section */
 		27DB3EC5DE74105DE5361C8C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		7D7DCCE71AE54EE4008597C8 /* Chapter10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter10.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7DCCE71AE54EE4008597C8 /* Chapter11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7DCCEB1AE54EE4008597C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7DCCEC1AE54EE4008597C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D7DCCF81AE54EE4008597C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D7DCCFD1AE54EE4008597C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7D7DCD031AE54EE4008597C8 /* Chapter10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chapter10Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7DCD031AE54EE4008597C8 /* Chapter11Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chapter11Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7DCD081AE54EE4008597C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7DCD091AE54EE4008597C8 /* Chapter9Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chapter9Tests.m; sourceTree = "<group>"; };
 		7D7DCD161AE54FF5008597C8 /* EMABAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABAppDelegate.h; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		7D7DCCDE1AE54EE4008597C8 = {
 			isa = PBXGroup;
 			children = (
-				7D7DCCE91AE54EE4008597C8 /* Chapter9 */,
+				7D7DCCE91AE54EE4008597C8 /* Chapter11 */,
 				7D7DCD061AE54EE4008597C8 /* Chapter9Tests */,
 				7D7DCCE81AE54EE4008597C8 /* Products */,
 				F367B5AD7E99D5377BF69B3F /* Pods */,
@@ -166,13 +166,13 @@
 		7D7DCCE81AE54EE4008597C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D7DCCE71AE54EE4008597C8 /* Chapter10.app */,
-				7D7DCD031AE54EE4008597C8 /* Chapter10Tests.xctest */,
+				7D7DCCE71AE54EE4008597C8 /* Chapter11.app */,
+				7D7DCD031AE54EE4008597C8 /* Chapter11Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D7DCCE91AE54EE4008597C8 /* Chapter9 */ = {
+		7D7DCCE91AE54EE4008597C8 /* Chapter11 */ = {
 			isa = PBXGroup;
 			children = (
 				7D7DCD161AE54FF5008597C8 /* EMABAppDelegate.h */,
@@ -182,6 +182,7 @@
 				7D7DCD131AE54F92008597C8 /* Model */,
 				7D7DCCEA1AE54EE4008597C8 /* Supporting Files */,
 			);
+			name = Chapter11;
 			path = Chapter9;
 			sourceTree = "<group>";
 		};
@@ -301,9 +302,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D7DCCE61AE54EE4008597C8 /* Chapter10 */ = {
+		7D7DCCE61AE54EE4008597C8 /* Chapter11 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter10" */;
+			buildConfigurationList = 7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter11" */;
 			buildPhases = (
 				1E24B3D32E990EAF3B02B945 /* Check Pods Manifest.lock */,
 				7D7DCCE31AE54EE4008597C8 /* Sources */,
@@ -315,14 +316,14 @@
 			);
 			dependencies = (
 			);
-			name = Chapter10;
+			name = Chapter11;
 			productName = Chapter9;
-			productReference = 7D7DCCE71AE54EE4008597C8 /* Chapter10.app */;
+			productReference = 7D7DCCE71AE54EE4008597C8 /* Chapter11.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7D7DCD021AE54EE4008597C8 /* Chapter10Tests */ = {
+		7D7DCD021AE54EE4008597C8 /* Chapter11Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter10Tests" */;
+			buildConfigurationList = 7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter11Tests" */;
 			buildPhases = (
 				7D7DCCFF1AE54EE4008597C8 /* Sources */,
 				7D7DCD001AE54EE4008597C8 /* Frameworks */,
@@ -333,9 +334,9 @@
 			dependencies = (
 				7D7DCD051AE54EE4008597C8 /* PBXTargetDependency */,
 			);
-			name = Chapter10Tests;
+			name = Chapter11Tests;
 			productName = Chapter9Tests;
-			productReference = 7D7DCD031AE54EE4008597C8 /* Chapter10Tests.xctest */;
+			productReference = 7D7DCD031AE54EE4008597C8 /* Chapter11Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -356,7 +357,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter10" */;
+			buildConfigurationList = 7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter11" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -369,8 +370,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D7DCCE61AE54EE4008597C8 /* Chapter10 */,
-				7D7DCD021AE54EE4008597C8 /* Chapter10Tests */,
+				7D7DCCE61AE54EE4008597C8 /* Chapter11 */,
+				7D7DCD021AE54EE4008597C8 /* Chapter11Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -479,7 +480,7 @@
 /* Begin PBXTargetDependency section */
 		7D7DCD051AE54EE4008597C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7D7DCCE61AE54EE4008597C8 /* Chapter10 */;
+			target = 7D7DCCE61AE54EE4008597C8 /* Chapter11 */;
 			targetProxy = 7D7DCD041AE54EE4008597C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -592,7 +593,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Chapter9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Chapter10;
+				PRODUCT_NAME = Chapter11;
 			};
 			name = Debug;
 		};
@@ -604,7 +605,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Chapter9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Chapter10;
+				PRODUCT_NAME = Chapter11;
 			};
 			name = Release;
 		};
@@ -622,7 +623,7 @@
 				);
 				INFOPLIST_FILE = Chapter9Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Chapter10Tests;
+				PRODUCT_NAME = Chapter11Tests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chapter9.app/Chapter9";
 			};
 			name = Debug;
@@ -637,7 +638,7 @@
 				);
 				INFOPLIST_FILE = Chapter9Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Chapter10Tests;
+				PRODUCT_NAME = Chapter11Tests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chapter9.app/Chapter9";
 			};
 			name = Release;
@@ -645,7 +646,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter10" */ = {
+		7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD0B1AE54EE4008597C8 /* Debug */,
@@ -654,7 +655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter10" */ = {
+		7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD0E1AE54EE4008597C8 /* Debug */,
@@ -663,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter10Tests" */ = {
+		7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter11Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD111AE54EE4008597C8 /* Debug */,

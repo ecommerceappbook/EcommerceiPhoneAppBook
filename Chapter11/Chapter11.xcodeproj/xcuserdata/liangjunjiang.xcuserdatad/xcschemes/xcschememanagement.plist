@@ -4,15 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Chapter10.xcscheme</key>
+		<key>Chapter11.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>Chapter9.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

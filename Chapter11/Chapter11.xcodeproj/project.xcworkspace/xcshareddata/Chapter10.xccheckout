@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>62F781DB-C44D-4DD6-A0C2-13F67F44E360</string>
+	<string>414A04D6-3304-4325-959D-83C71F7CDD19</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Chapter9</string>
+	<string>Chapter10</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>81DF439CDCB4E7B64B83AAD1381D69469D2F7660</key>
 		<string>https://github.com/ecommerceappbook/EcommerceiPhoneAppBook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Chapter11/Chapter9.xcworkspace</string>
+	<string>Chapter11/Chapter10.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>81DF439CDCB4E7B64B83AAD1381D69469D2F7660</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ecommerceappbook/EcommerceiPhoneAppBook.git</string>
