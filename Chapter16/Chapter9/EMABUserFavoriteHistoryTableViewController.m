@@ -32,6 +32,8 @@
     return query;
 }
 
+#pragma mark - UITableView Datasource
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 80.0;
@@ -47,6 +49,24 @@
     return cell;
 }
 
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        EMABFavoriteProduct *fProduct = (EMABFavoriteProduct *)[self objectAtIndexPath:indexPath];
+        [fProduct deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                [self loadObjects];
+            }
+        }];
+    }
+}
+
+
+#pragma mark - UITableView Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == [[self objects] count]) {
         [self loadNextPage];
@@ -56,6 +76,8 @@
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
+
+
 
 
 @end
