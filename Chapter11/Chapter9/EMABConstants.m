@@ -20,6 +20,12 @@ NSString *const kCategory = @"Category";
 NSString *const kProduct = @"Product";
 NSString *const kFavoriteProduct = @"FavoriteProduct";
 
+int const kMinTextLength = 6;
+float const kLeftMargin = 20.0;
+float const kTextFieldWidth = 260.0;
+float const kTextFieldWidth = 30.0;
+float const kTopMargin = 7.0;
+
 @implementation EMABConstants
 
 @end

@@ -21,7 +21,11 @@ extern NSString *const kMailgunAPIKey;
 extern NSString *const kCategory;
 extern NSString *const kProduct;
 extern NSString *const kFavoriteProduct;
-
+extern int const kMinTextLength;
+extern float const kLeftMargin;
+extern float const kTextFieldWidth;
+extern float const kTextFieldHeight;
+extern float const kTopMargin;
 
 @interface EMABConstants : NSObject
 
