@@ -9,7 +9,7 @@
 #import "EMABDispatchViewController.h"
 #import "EMABConstants.h"
 #import "EMABUser.h"
-#import <PFFacebookUtils/PFFacebookUtils.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 @interface EMABDispatchViewController ()
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @end
@@ -61,28 +61,21 @@
         if (!error) {
             // Parse the data received
             NSDictionary *userData = (NSDictionary *)result;
-            
             NSString *facebookID = userData[@"id"];
-            
             NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
             
-            [user setEmail:userData[@"email"]];
-            [user setUsername:userData[@"email"]];
-            [user setLastName:userData[@"name"]];
-            if (userData[@"location"][@"name"]) {
-                [EMABUser setLocationName:userData[@"location"][@"name"]];
-            }
-            [EMABUser setPictureUrl:[pictureURL absoluteString]];
-            
-            if (EMABUser.pictureUrl) {
+            [fbUser setEmail:userData[@"email"]];
+            [fbUser setUsername:userData[@"email"]];
+            [fbUser setName:userData[@"name"]];
+            if ([pictureURL absoluteString]) {
                 dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
                 dispatch_async(queue, ^{
-                    NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:EMABUser.pictureUrl]];
+                    NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[pictureURL absoluteString]]];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         PFFile *iconFile = [PFFile fileWithName:@"avatar.jpg" data:imageData];
                         [iconFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                             if (!error) {
-                                EMABUser.icon = iconFile;
+                                fbUser.photo = iconFile;
                             }
                         }];
                         
@@ -90,20 +83,7 @@
                 });
             }
             
-            if (userData[@"gender"]) {
-                [EMABUser setGender:userData[@"gender"]];
-            }
-            
-            if (userData[@"birthday"]) {
-                [EMABUser setBirthday:userData[@"birthday"]];
-            }
-            
-            if (userData[@"relationship_status"]) {
-                [EMABUser setRelationshipStatus:userData[@"relationship_status"]];
-            }
-            
-            
-            [EMABUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            [fbUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error) {
                     [self dismissViewControllerAnimated:YES completion:nil];
                 }

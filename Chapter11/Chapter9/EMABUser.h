@@ -10,7 +10,8 @@
 @interface EMABUser : PFUser<PFSubclassing>
 @property (nonatomic, copy) NSString *firstName;
 @property (nonatomic, copy) NSString *lastName;
-@property (nonatomic, assign) int gender;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *gender;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *address1;
 @property (nonatomic, copy) NSString *address2;

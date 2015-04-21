@@ -1,6 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-workspace 'Chapter9'
+workspace 'Chapter11'
 
 pod 'Parse'
+pod 'ParseFacebookUtils'
 pod 'ParseUI'
+pod 'Facebook-iOS-SDK'
