@@ -9,10 +9,11 @@
 #import "EMABSignupViewController.h"
 #import "EMABConstants.h"
 #import "EMABUser.h"
-@interface EMABSignupViewController ()<UITableViewDataSource, UITextFieldDelegate>
+@interface EMABSignupViewController ()<UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate>
 @property (nonatomic, strong) UITextField *emailTextField;
 @property (nonatomic, strong) UITextField *passwordTextField;
 @property (nonatomic, strong) UITextField *passwordAgainTextField;
+@property (nonatomic, weak) IBOutlet UITableView *signupTableView;
 @end
 
 @implementation EMABSignupViewController

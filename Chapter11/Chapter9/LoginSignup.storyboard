@@ -108,6 +108,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RwQ-4q-GUo" id="ay2-eY-T2b"/>
+                                    <outlet property="delegate" destination="RwQ-4q-GUo" id="eIN-tI-n31"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h09-uD-ELg">
                                 <rect key="frame" x="22" y="284" width="280" height="30"/>
@@ -128,6 +132,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="view" destination="epq-gl-aDm" id="Urh-m0-wuH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3r-Vt-x3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
