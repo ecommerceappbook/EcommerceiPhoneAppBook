@@ -20,6 +20,7 @@ extern NSString *const kMailgunAPIKey;
 
 extern NSString *const kCategory;
 extern NSString *const kProduct;
+extern NSString *const kFavoriteProduct;
 
 
 @interface EMABConstants : NSObject

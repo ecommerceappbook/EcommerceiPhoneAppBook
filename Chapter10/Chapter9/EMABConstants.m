@@ -18,6 +18,7 @@ NSString *const kMailgunAPIKey = @"YOUR-MAILGUN-API-KEY";
 
 NSString *const kCategory = @"Category";
 NSString *const kProduct = @"Product";
+NSString *const kFavoriteProduct = @"FavoriteProduct";
 
 @implementation EMABConstants
 

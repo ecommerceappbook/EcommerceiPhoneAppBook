@@ -7,7 +7,36 @@
 //
 
 #import "EMABFavoriteProduct.h"
-
+#import  <Parse/PFObject+Subclass.h>
+#import "EMABConstants.h"
+#import "EMABUser.h"
+#import "EMABProduct.h"
 @implementation EMABFavoriteProduct
+@dynamic customer, product;
++(NSString *)parseClassName
+{
+    return kFavoriteProduct;
+}
+
++(PFQuery *)basicQuery
+{
+    PFQuery *query = [PFQuery queryWithClassName:[self parseClassName]];
+    [query orderByDescending:@"createdAt"];
+    return query;
+}
+
++(PFQuery *)queryForCustomer:(EMABUser *)customer {
+    PFQuery *query = [self basicQuery];
+    [query whereKey:@"customer" equalTo:customer];
+    return query;
+    
+}
+
++(PFQuery *)queryForCustomer:(EMABUser *)customer product:(EMABProduct *)product
+{
+    PFQuery *query = [self queryForCustomer:customer];
+    [query whereKey:@"product" equalTo:product];
+    return query;
+}
 
 @end
