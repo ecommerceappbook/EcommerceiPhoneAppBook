@@ -768,9 +768,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-pD-u9z">
-                                <rect key="frame" x="156" y="415" width="148" height="30"/>
-                                <state key="normal" title="Favorite It">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-pD-u9z">
+                                <rect key="frame" x="260" y="142" width="44" height="44"/>
+                                <state key="normal" image="heart">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -784,7 +784,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGe-c0-oUj">
-                                <rect key="frame" x="-51" y="415" width="288" height="30"/>
+                                <rect key="frame" x="16" y="415" width="288" height="30"/>
                                 <state key="normal" title="Add to Bag">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -799,6 +799,7 @@
                     <connections>
                         <outlet property="detailTextView" destination="LYQ-yh-M4z" id="5xz-iT-eTx"/>
                         <outlet property="fullsizeImageView" destination="pTb-z6-6aZ" id="ATl-uk-l4M"/>
+                        <outlet property="heartButton" destination="RwY-pD-u9z" id="IbC-0D-0V4"/>
                         <outlet property="productNameLabel" destination="e3B-ff-qx0" id="bNE-6F-T2d"/>
                         <outlet property="productPriceLabel" destination="Hs5-78-BX0" id="feI-gM-GQ9"/>
                     </connections>
@@ -851,6 +852,7 @@
         <image name="category_cell_default_background" width="320" height="80"/>
         <image name="default_product_thumbnail" width="52" height="64"/>
         <image name="first" width="30" height="30"/>
+        <image name="heart" width="44" height="44"/>
         <image name="product_1" width="350" height="350"/>
         <image name="second" width="30" height="30"/>
         <image name="third" width="23" height="24"/>

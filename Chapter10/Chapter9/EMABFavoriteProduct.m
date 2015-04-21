@@ -25,14 +25,14 @@
     return query;
 }
 
-+(PFQuery *)queryForCustomer:(EMABUser *)customer {
++(PFQuery *)queryForCustomer:(PFUser *)customer {
     PFQuery *query = [self basicQuery];
     [query whereKey:@"customer" equalTo:customer];
     return query;
     
 }
 
-+(PFQuery *)queryForCustomer:(EMABUser *)customer product:(EMABProduct *)product
++(PFQuery *)queryForCustomer:(PFUser *)customer product:(EMABProduct *)product
 {
     PFQuery *query = [self queryForCustomer:customer];
     [query whereKey:@"product" equalTo:product];

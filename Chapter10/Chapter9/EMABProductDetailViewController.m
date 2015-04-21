@@ -16,7 +16,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *productNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *productPriceLabel;
 @property (nonatomic, weak) IBOutlet UITextView *detailTextView;
-
+@property (nonatomic, weak) IBOutlet UIButton *heartButton;
 @end
 
 @implementation EMABProductDetailViewController
@@ -32,7 +32,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self updateUI];
 }
 
@@ -50,16 +49,42 @@
 
 -(IBAction)onBag:(id)sender
 {
-   
+    if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self showWarning];
+    } else {
+        //todo:
+    }
     
 }
 
 
 -(IBAction)onFavorite:(id)sender{
-    
-    
-    
+    if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self showWarning];
+    } else {
+        //todo:
+    }
 }
 
+#pragma mark - helper
+-(void)checkIfFavorited
+{
+    if (![PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
+        PFQuery *fPQuery = [EMABFavoriteProduct queryForCustomer:[PFUser currentUser] product:self.product];
+        [fPQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error){
+            if (!error) {
+                self.heartButton.enabled = false;
+            }
+        }];
+    }
+}
+
+
+-(void)showWarning
+{
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Warning") message:NSLocalizedString(@"Please sign up or log in", @"") delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil, nil] show];
+}
+
+//hear.png http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/2000px-Heart_coraz%C3%B3n.svg.png
 
 @end
