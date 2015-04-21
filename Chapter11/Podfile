@@ -1,0 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+workspace 'Chapter9'
+
+pod 'Parse'
+pod 'ParseUI'
