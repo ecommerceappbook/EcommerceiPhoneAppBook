@@ -32,6 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configureView];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onDone:)];
 }
 
 
@@ -41,6 +43,10 @@
         self.imageView.file = self.promotion.image;
         [self.imageView loadInBackground];
     }
+}
+
+-(void)onDone:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

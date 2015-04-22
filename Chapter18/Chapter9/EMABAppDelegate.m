@@ -17,6 +17,7 @@
 #import "EMABPaymentMethod.h"
 #import "EMABFavoriteProduct.h"
 #import "EMABPromotion.h"
+#import "EMABPromotionViewController.h"
 @interface EMABAppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -128,12 +129,11 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
      EMABPromotion *promotion = (EMABPromotion *)[PFObject objectWithoutDataWithClassName:kPromotion
                                                              objectId:objectId];
      [promotion fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        // Show photo view controller
+        // Show promotion view controller
         if (!error) {
-            //            PhotoVC *viewController = [[PhotoVC alloc] initWithPhoto:object];
-            //            [self.navController pushViewController:viewController animated:YES];
-            
-            
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            EMABPromotionViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"EMABPromotionViewController"];
+            [self.window.rootViewController presentViewController:viewController animated:YES completion:nil];
         }
     }];
 }
