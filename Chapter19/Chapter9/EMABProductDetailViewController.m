@@ -61,26 +61,49 @@
     if ([PFAnonymousUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self showWarning];
     } else {
-        //todo:
         if (self.order) {
-            
-        } else {
-            EMABOrder *order = [EMABOrder object];
-            [order setCustomer:[EMABUser currentUser]];
-            [order setOrderStatus:ORDER_NOT_MADE];
-            EMABOrderItem *item = [EMABOrderItem object];
-            [item setProduct:self.product];
-            [item setQuantity:1];
-            [order setItems:@[item]];
-            [order saveInBackgroundWithBlock:^(BOOL success, NSError *error){
-                if (!error) {
-                    //show success
+            //We have an unfinished order object, we need to add more products
+            //If the order has already had this product, we add one more for its quantity
+            if ([self.order.items count] > 0) {
+                if ([self containsProduct:self.order.items target:self.product] > -1) {
+                    int index = [self containsProduct:self.order.items target:self.product];
+                    NSMutableArray *eItems = [NSMutableArray arrayWithArray:self.order.items];
+                    EMABOrderItem *foundItem = eItems[index];
+                    [foundItem setQuantity:foundItem.quantity+1];
+                    [eItems replaceObjectAtIndex:index withObject:foundItem];
+                    self.order.items = [eItems copy];
+                } else {
+                    [self.order addSingleProduct:self.product];
                 }
-            }];
-            
+            } else {
+                [self.order addSingleProduct:self.product];
+            }
+        } else {
+            self.order = [EMABOrder object];
+            [self.order setCustomer:[EMABUser currentUser]];
+            [self.order setOrderStatus:ORDER_NOT_MADE];
+            [self.order addSingleProduct:self.product];
+          
         }
     }
-    
+    [self.order saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+        if (!error) {
+            //show success
+        }
+    }];
+}
+
+-(int)containsProduct:(NSArray *)items target:(EMABProduct *)product {
+    int index = -1;
+    for (int i = 0; i<[items count]; i++){
+        EMABOrderItem *item = items[i];
+        if ([item.product.objectId isEqualToString:self.product.objectId]) {
+            index = i;
+            break;
+        }
+    }
+
+    return index;
 }
 
 

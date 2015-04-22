@@ -49,4 +49,11 @@
     return query;
 }
 
+
+-(void)addSingleProduct:(EMABProduct *)product{
+    EMABOrderItem *item = [EMABOrderItem object];
+    [item setProduct:product];
+    [item setQuantity:1];
+    [self setItems:@[item]];
+}
 @end

@@ -10,6 +10,7 @@
 #import "EMABConstants.h"
 @class EMABOrderItem;
 @class EMABUser;
+@class EMABProduct;
 @interface EMABOrder : PFObject<PFSubclassing>
 @property (nonatomic, strong) EMABUser *customer;
 @property (nonatomic, assign) int64_t orderNo;
@@ -22,4 +23,6 @@
 +(PFQuery *)basicQuery;
 +(PFQuery *)queryForCustomer:(EMABUser *)customer;
 +(PFQuery *)queryForCustomer:(EMABUser *)customer orderStatus:(ORDER_STATUS)status;
+
+-(void)addSingleProduct:(EMABProduct *)product;
 @end
