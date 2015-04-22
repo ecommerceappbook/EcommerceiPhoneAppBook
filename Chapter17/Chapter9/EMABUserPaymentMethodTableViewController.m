@@ -30,6 +30,12 @@
     return query;
 }
 
+#pragma mark - IBAction
+-(IBAction)onAdd:(id)sender
+{
+    
+    
+}
 
 #pragma mark - UITableView Datasource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(EMABPaymentMethod *)object{
@@ -43,6 +49,21 @@
     return cell;
 }
 
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        EMABPaymentMethod *paymentMethod = (EMABPaymentMethod *)[self objectAtIndexPath:indexPath];
+        [paymentMethod deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                [self loadObjects];
+            }
+        }];
+    }
+}
 
 
 @end
