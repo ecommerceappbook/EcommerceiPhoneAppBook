@@ -40,4 +40,10 @@
     return query;
 }
 
++(PFQuery *)queryForCustomer:(EMABUser *)customer orderStatus:(ORDER_STATUS)status{
+    PFQuery  *query = [self queryForCustomer:customer];
+    [query whereKey:@"orderStatus" equalTo:@(status)];
+    return query;
+}
+
 @end

@@ -20,4 +20,5 @@
 -(double)total;
 +(PFQuery *)basicQuery;
 +(PFQuery *)queryForCustomer:(EMABUser *)customer;
++(PFQuery *)queryForCustomer:(EMABUser *)customer orderStatus:(ORDER_STATUS)status;
 @end
