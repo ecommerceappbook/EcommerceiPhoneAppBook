@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D1B21111AE6AA71001D869F /* EMABEmailTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21101AE6AA71001D869F /* EMABEmailTextField.m */; };
 		7D1B21141AE6AA8E001D869F /* EMABPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21131AE6AA8E001D869F /* EMABPasswordTextField.m */; };
+		7D1B21171AE7F3C7001D869F /* EMABPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21161AE7F3C7001D869F /* EMABPromotion.m */; };
 		7D7DCCED1AE54EE4008597C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCCEC1AE54EE4008597C8 /* main.m */; };
 		7D7DCCF91AE54EE4008597C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCCF71AE54EE4008597C8 /* Main.storyboard */; };
 		7D7DCCFE1AE54EE4008597C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCCFC1AE54EE4008597C8 /* LaunchScreen.xib */; };
@@ -62,12 +63,14 @@
 		7D1B21101AE6AA71001D869F /* EMABEmailTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABEmailTextField.m; sourceTree = "<group>"; };
 		7D1B21121AE6AA8E001D869F /* EMABPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABPasswordTextField.h; sourceTree = "<group>"; };
 		7D1B21131AE6AA8E001D869F /* EMABPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPasswordTextField.m; sourceTree = "<group>"; };
-		7D7DCCE71AE54EE4008597C8 /* Chapter16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter16.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1B21151AE7F3C7001D869F /* EMABPromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABPromotion.h; sourceTree = "<group>"; };
+		7D1B21161AE7F3C7001D869F /* EMABPromotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPromotion.m; sourceTree = "<group>"; };
+		7D7DCCE71AE54EE4008597C8 /* Chapter18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter18.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7DCCEB1AE54EE4008597C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7DCCEC1AE54EE4008597C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D7DCCF81AE54EE4008597C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D7DCCFD1AE54EE4008597C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7D7DCD031AE54EE4008597C8 /* Chapter16Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chapter16Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7DCD031AE54EE4008597C8 /* Chapter18Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chapter18Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7DCD081AE54EE4008597C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7DCD091AE54EE4008597C8 /* Chapter9Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chapter9Tests.m; sourceTree = "<group>"; };
 		7D7DCD161AE54FF5008597C8 /* EMABAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABAppDelegate.h; sourceTree = "<group>"; };
@@ -172,8 +175,8 @@
 		7D7DCCE81AE54EE4008597C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D7DCCE71AE54EE4008597C8 /* Chapter16.app */,
-				7D7DCD031AE54EE4008597C8 /* Chapter16Tests.xctest */,
+				7D7DCCE71AE54EE4008597C8 /* Chapter18.app */,
+				7D7DCD031AE54EE4008597C8 /* Chapter18Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +245,8 @@
 				7D7DCD351AE54FF5008597C8 /* EMABProduct.m */,
 				7D7DCD401AE54FF5008597C8 /* EMABUser.h */,
 				7D7DCD411AE54FF5008597C8 /* EMABUser.m */,
+				7D1B21151AE7F3C7001D869F /* EMABPromotion.h */,
+				7D1B21161AE7F3C7001D869F /* EMABPromotion.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,9 +317,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D7DCCE61AE54EE4008597C8 /* Chapter16 */ = {
+		7D7DCCE61AE54EE4008597C8 /* Chapter18 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter16" */;
+			buildConfigurationList = 7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter18" */;
 			buildPhases = (
 				1E24B3D32E990EAF3B02B945 /* Check Pods Manifest.lock */,
 				7D7DCCE31AE54EE4008597C8 /* Sources */,
@@ -326,14 +331,14 @@
 			);
 			dependencies = (
 			);
-			name = Chapter16;
+			name = Chapter18;
 			productName = Chapter9;
-			productReference = 7D7DCCE71AE54EE4008597C8 /* Chapter16.app */;
+			productReference = 7D7DCCE71AE54EE4008597C8 /* Chapter18.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7D7DCD021AE54EE4008597C8 /* Chapter16Tests */ = {
+		7D7DCD021AE54EE4008597C8 /* Chapter18Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter16Tests" */;
+			buildConfigurationList = 7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter18Tests" */;
 			buildPhases = (
 				7D7DCCFF1AE54EE4008597C8 /* Sources */,
 				7D7DCD001AE54EE4008597C8 /* Frameworks */,
@@ -344,9 +349,9 @@
 			dependencies = (
 				7D7DCD051AE54EE4008597C8 /* PBXTargetDependency */,
 			);
-			name = Chapter16Tests;
+			name = Chapter18Tests;
 			productName = Chapter9Tests;
-			productReference = 7D7DCD031AE54EE4008597C8 /* Chapter16Tests.xctest */;
+			productReference = 7D7DCD031AE54EE4008597C8 /* Chapter18Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -367,7 +372,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter16" */;
+			buildConfigurationList = 7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter18" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -380,8 +385,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D7DCCE61AE54EE4008597C8 /* Chapter16 */,
-				7D7DCD021AE54EE4008597C8 /* Chapter16Tests */,
+				7D7DCCE61AE54EE4008597C8 /* Chapter18 */,
+				7D7DCD021AE54EE4008597C8 /* Chapter18Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -476,6 +481,7 @@
 				7D7DCD611AE54FF5008597C8 /* EMABProductsTableViewController.m in Sources */,
 				7D7DCD4F1AE54FF5008597C8 /* EMABAppDelegate.m in Sources */,
 				7D7DCD511AE54FF5008597C8 /* EMABCategoriesTableViewController.m in Sources */,
+				7D1B21171AE7F3C7001D869F /* EMABPromotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +498,7 @@
 /* Begin PBXTargetDependency section */
 		7D7DCD051AE54EE4008597C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7D7DCCE61AE54EE4008597C8 /* Chapter16 */;
+			target = 7D7DCCE61AE54EE4008597C8 /* Chapter18 */;
 			targetProxy = 7D7DCD041AE54EE4008597C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -605,7 +611,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Chapter9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Chapter16;
+				PRODUCT_NAME = Chapter18;
 			};
 			name = Debug;
 		};
@@ -617,7 +623,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Chapter9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Chapter16;
+				PRODUCT_NAME = Chapter18;
 			};
 			name = Release;
 		};
@@ -635,7 +641,7 @@
 				);
 				INFOPLIST_FILE = Chapter9Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Chapter16Tests;
+				PRODUCT_NAME = Chapter18Tests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chapter9.app/Chapter9";
 			};
 			name = Debug;
@@ -650,7 +656,7 @@
 				);
 				INFOPLIST_FILE = Chapter9Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Chapter16Tests;
+				PRODUCT_NAME = Chapter18Tests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chapter9.app/Chapter9";
 			};
 			name = Release;
@@ -658,7 +664,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter16" */ = {
+		7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter18" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD0B1AE54EE4008597C8 /* Debug */,
@@ -667,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter16" */ = {
+		7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter18" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD0E1AE54EE4008597C8 /* Debug */,
@@ -676,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter16Tests" */ = {
+		7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter18Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD111AE54EE4008597C8 /* Debug */,

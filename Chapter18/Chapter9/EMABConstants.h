@@ -23,7 +23,7 @@ extern NSString *const kProduct;
 extern NSString *const kFavoriteProduct;
 extern NSString *const kOrder;
 extern NSString *const kPaymentMethod;
-
+extern NSString *const kPromotion;
 
 extern int const kMinTextLength;
 extern float const kLeftMargin;

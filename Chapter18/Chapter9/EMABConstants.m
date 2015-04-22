@@ -21,7 +21,7 @@ NSString *const kProduct = @"Product";
 NSString *const kFavoriteProduct = @"FavoriteProduct";
 NSString *const kOrder = @"Order";
 NSString *const kPaymentMethod = @"PaymentMethod";
-
+NSString *const kPromotion = @"Promotion";
 
 int const kMinTextLength = 6;
 float const kLeftMargin = 20.0;

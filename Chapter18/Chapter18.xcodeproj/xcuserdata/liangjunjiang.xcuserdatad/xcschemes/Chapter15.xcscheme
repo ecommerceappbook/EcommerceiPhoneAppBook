@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7D7DCCE61AE54EE4008597C8"
                BuildableName = "Chapter16.app"
-               BlueprintName = "Chapter16"
-               ReferencedContainer = "container:Chapter16.xcodeproj">
+               BlueprintName = "Chapter18"
+               ReferencedContainer = "container:Chapter18.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7D7DCCE61AE54EE4008597C8"
             BuildableName = "Chapter16.app"
-            BlueprintName = "Chapter16"
-            ReferencedContainer = "container:Chapter16.xcodeproj">
+            BlueprintName = "Chapter18"
+            ReferencedContainer = "container:Chapter18.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -54,8 +54,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7D7DCCE61AE54EE4008597C8"
             BuildableName = "Chapter16.app"
-            BlueprintName = "Chapter16"
-            ReferencedContainer = "container:Chapter16.xcodeproj">
+            BlueprintName = "Chapter18"
+            ReferencedContainer = "container:Chapter18.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -73,8 +73,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7D7DCCE61AE54EE4008597C8"
             BuildableName = "Chapter16.app"
-            BlueprintName = "Chapter16"
-            ReferencedContainer = "container:Chapter16.xcodeproj">
+            BlueprintName = "Chapter18"
+            ReferencedContainer = "container:Chapter18.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
