@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class EMABPromotion;
 @interface EMABPromotionViewController : UIViewController
 @property (nonatomic, strong) EMABPromotion *promotion;
