@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 @class EMABOrderItem;
 @interface EMABOrderItemTableViewCell : UITableViewCell
--(void)configureItem:(EMABOrderItem *)item;
+-(void)configureItem:(EMABOrderItem *)item tag:(long)tag;
 @end

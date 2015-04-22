@@ -41,6 +41,9 @@
                                     <state key="normal" title="Buy with Credit Card">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="onPayWithCreditCard:" destination="0hX-v0-CLX" eventType="touchUpInside" id="4rC-VP-Gv6"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AN-xU-CZp">
                                     <rect key="frame" x="8" y="8" width="89" height="21"/>
@@ -59,6 +62,9 @@
                                     <state key="normal" image="apple_pay">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="onApplePay:" destination="0hX-v0-CLX" eventType="touchUpInside" id="cVO-bD-ocF"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,6 +77,9 @@
                                     <subviews>
                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-xw-0t0">
                                             <rect key="frame" x="218" y="15" width="94" height="29"/>
+                                            <connections>
+                                                <action selector="onStepper:" destination="0hX-v0-CLX" eventType="valueChanged" id="Ygo-ka-BlA"/>
+                                            </connections>
                                         </stepper>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skin So Soft Original 5-Piece Pampering Set" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slL-jl-4iN">
                                             <rect key="frame" x="5" y="2" width="160" height="38"/>
@@ -107,8 +116,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bag" id="QNJ-iP-ELO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="lI0-8u-PBL"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="lI0-8u-PBL">
+                            <connections>
+                                <action selector="onNote:" destination="0hX-v0-CLX" id="VCh-5G-JKo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ordeDateLabel" destination="JIc-1w-gZz" id="tgS-vI-heh"/>
+                        <outlet property="ordeNoLabel" destination="HMC-Ke-CU0" id="tIK-4h-62m"/>
+                        <outlet property="totalLabel" destination="mql-ez-tgn" id="L0J-KX-gnV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buV-9D-bTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

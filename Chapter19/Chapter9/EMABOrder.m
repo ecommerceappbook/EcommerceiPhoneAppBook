@@ -27,7 +27,7 @@
 }
 
 -(NSString *)friendlyTotal {
-    return [NSString stringWithFormat:@"%.2f",[self total]];
+    return [NSString stringWithFormat:@"$%.2f",[self total]];
 }
 
 +(PFQuery *)basicQuery{

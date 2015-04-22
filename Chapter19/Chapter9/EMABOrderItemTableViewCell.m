@@ -17,9 +17,12 @@
 @end
 
 @implementation EMABOrderItemTableViewCell
--(void)configureItem:(EMABOrderItem *)item {
+-(void)configureItem:(EMABOrderItem *)item tag:(long)tag{
     self.nameLabel.text = item.product.name;
     self.unitPriceLabel.text = [item.product friendlyPrice];
     self.quantityLabel.text = [item friendlyQuantity];
+    self.quantityStepper.value = item.quantity;
+    self.quantityStepper.stepValue = 1;
+    self.quantityStepper.tag = tag + 100;
 }
 @end

@@ -28,18 +28,28 @@
     [self queryForUnfinishedOrder];
 }
 
-
-
-
 -(void)queryForUnfinishedOrder {
     PFQuery *orderQuery = [EMABOrder queryForCustomer:[EMABUser currentUser] orderStatus:ORDER_NOT_MADE];
     [orderQuery getFirstObjectInBackgroundWithBlock:^(PFObject *order, NSError *error){
         if (!error) {
             self.order = (EMABOrder *)order;
+            self.ordeNoLabel.text = @"";
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+            self.ordeDateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
+            self.totalLabel.text = [self.order friendlyTotal];
+            [self.tableView reloadData];
         }
     }];
 }
+
 #pragma mark - IBAction
+-(IBAction)onNote:(id)sender {
+    
+    
+}
+
+
 -(IBAction)onPayWithCreditCard:(id)sender{
     
     
@@ -47,6 +57,13 @@
 
 -(IBAction)onApplePay:(id)sender{
     
+    
+}
+
+-(IBAction)onStepper:(id)sender {
+    //we need to update the quantity
+    
+    self.totalLabel.text = [self.order friendlyTotal];
     
 }
 
@@ -63,7 +80,7 @@
 - (EMABOrderItemTableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EMABOrderItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OrderItem" forIndexPath:indexPath];
  
-    if (self.order) [cell configureItem:self.order.items[indexPath.row]];
+    if (self.order) [cell configureItem:self.order.items[indexPath.row] tag:indexPath.row];
     return cell;
 }
 
