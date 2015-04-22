@@ -39,6 +39,16 @@
         }
     }];
 }
+#pragma mark - IBAction
+-(IBAction)onPayWithCreditCard:(id)sender{
+    
+    
+}
+
+-(IBAction)onApplePay:(id)sender{
+    
+    
+}
 
 #pragma mark - UITableView Data Source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -51,7 +61,7 @@
 
 
 - (EMABOrderItemTableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    EMABOrderItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OrderItemCell" forIndexPath:indexPath];
+    EMABOrderItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OrderItem" forIndexPath:indexPath];
  
     if (self.order) [cell configureItem:self.order.items[indexPath.row]];
     return cell;
