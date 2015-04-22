@@ -62,8 +62,6 @@
         [self showWarning];
     } else {
         if (self.order) {
-            //We have an unfinished order object, we need to add more products
-            //If the order has already had this product, we add one more for its quantity
             if ([self.order.items count] > 0) {
                 if ([self containsProduct:self.order.items target:self.product] > -1) {
                     int index = [self containsProduct:self.order.items target:self.product];
@@ -88,7 +86,7 @@
     }
     [self.order saveInBackgroundWithBlock:^(BOOL success, NSError *error){
         if (!error) {
-            //show success
+            [self showSuccess];
         }
     }];
 }
@@ -116,7 +114,7 @@
         [favoriteProduct setProduct:self.product];
         [favoriteProduct saveInBackgroundWithBlock:^(BOOL success, NSError *error){
             if (!error) {
-                 [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", @"Success") message:NSLocalizedString(@"Successfully added", @"") delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil, nil] show];
+                [self showSuccess];
             }
         }];
     }
@@ -173,6 +171,10 @@
 -(void)showWarning
 {
     [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"Warning") message:NSLocalizedString(@"Please sign up or log in", @"") delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil, nil] show];
+}
+
+-(void)showSuccess{
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Success", @"Success") message:NSLocalizedString(@"Successfully added", @"") delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil, nil] show];
 }
 
 //hear.png http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/2000px-Heart_coraz%C3%B3n.svg.png

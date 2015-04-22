@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Liangjun Jiang. All rights reserved.
 //
 
-#import "PFTableViewCell.h"
+#import <UIKit/UIKit.h>
 @class EMABOrderItem;
-@interface EMABOrderItemTableViewCell : PFTableViewCell
+@interface EMABOrderItemTableViewCell : UITableViewCell
 -(void)configureItem:(EMABOrderItem *)item;
 @end
