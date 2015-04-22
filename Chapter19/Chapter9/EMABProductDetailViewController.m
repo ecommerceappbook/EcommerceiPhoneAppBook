@@ -9,14 +9,19 @@
 #import "EMABProductDetailViewController.h"
 #import "EMABProduct.h"
 #import <ParseUI/PFImageView.h>
-#import "EMABOrder.h"
+#import "EMABUser.h"
 #import "EMABFavoriteProduct.h"
+#import "EMABOrder.h"
+#import "EMABOrderItem.h"
+
 @interface EMABProductDetailViewController ()
 @property (nonatomic, weak) IBOutlet PFImageView *fullsizeImageView;
 @property (nonatomic, weak) IBOutlet UILabel *productNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *productPriceLabel;
 @property (nonatomic, weak) IBOutlet UITextView *detailTextView;
 @property (nonatomic, weak) IBOutlet UIButton *heartButton;
+@property (nonatomic, strong) EMABOrder *order;
+
 @end
 
 @implementation EMABProductDetailViewController
@@ -44,6 +49,10 @@
     self.productNameLabel.text = self.product.name;
     self.productPriceLabel.text = [self.product friendlyPrice];
     self.detailTextView.text = [self.product detail];
+    
+    if (![PFAnonymousUtils isLinkedWithUser:[EMABUser currentUser]]) {
+        [self queryForUnfinishedOrder];
+    }
 }
 
 
@@ -53,6 +62,23 @@
         [self showWarning];
     } else {
         //todo:
+        if (self.order) {
+            
+        } else {
+            EMABOrder *order = [EMABOrder object];
+            [order setCustomer:[EMABUser currentUser]];
+            [order setOrderStatus:ORDER_NOT_MADE];
+            EMABOrderItem *item = [EMABOrderItem object];
+            [item setProduct:self.product];
+            [item setQuantity:1];
+            [order setItems:@[item]];
+            [order saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+                if (!error) {
+                    //show success
+                }
+            }];
+            
+        }
     }
     
 }
@@ -94,6 +120,18 @@
     activityVC.excludedActivityTypes = excludeActivities;
     [self presentViewController:activityVC animated:YES completion:nil];
 }
+
+#pragma mark - Order not checkedout
+-(void)queryForUnfinishedOrder{
+    PFQuery *orderQuery = [EMABOrder queryForCustomer:[EMABUser currentUser] orderStatus:ORDER_NOT_MADE];
+    [orderQuery getFirstObjectInBackgroundWithBlock:^(PFObject *order, NSError *error){
+        if (!error) {
+            self.order = (EMABOrder *)order;
+        }
+    }];
+    
+}
+
 
 #pragma mark - helper
 -(void)checkIfFavorited
