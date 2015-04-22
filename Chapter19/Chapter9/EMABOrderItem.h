@@ -10,8 +10,10 @@
 @class EMABProduct;
 
 @interface EMABOrderItem : PFObject
-@property (nonatomic, assign) double quantity;
+@property (nonatomic, assign) int64_t quantity;
 @property (nonatomic, strong) EMABProduct *product;
 
 -(double)subTotal;
+
+-(NSString *)friendlyQuantity;
 @end

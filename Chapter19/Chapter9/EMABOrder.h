@@ -18,6 +18,7 @@
 @property (nonatomic, assign) ORDER_STATUS orderStatus;
 @property (nonatomic, assign) NSString *customerNote;
 -(double)total;
+-(NSString *)friendlyTotal;
 +(PFQuery *)basicQuery;
 +(PFQuery *)queryForCustomer:(EMABUser *)customer;
 +(PFQuery *)queryForCustomer:(EMABUser *)customer orderStatus:(ORDER_STATUS)status;

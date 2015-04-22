@@ -7,15 +7,21 @@
 //
 
 #import "EMABOrderItemTableViewCell.h"
+#import "EMABOrderItem.h"
+#import "EMABProduct.h"
+@interface EMABOrderItemTableViewCell()
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *unitPriceLabel;
+@property (nonatomic, weak) IBOutlet UILabel *quantityLabel;
+@property (nonatomic, weak) IBOutlet UIStepper *quantityStepper;
+@end
 
 @implementation EMABOrderItemTableViewCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
+-(void)configureItem:(EMABOrderItem *)item {
+    self.nameLabel.text = item.product.name;
+    self.unitPriceLabel.text = [item.product friendlyPrice];
+    self.quantityLabel.text = [item friendlyQuantity];
+}
 @end

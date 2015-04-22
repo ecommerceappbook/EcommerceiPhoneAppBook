@@ -21,4 +21,7 @@
     return self.quantity *self.product.unitPrice;
 }
 
+-(NSString *)friendlyQuantity {
+    return [NSString stringWithFormat:@"X%lld",self.quantity];
+}
 @end

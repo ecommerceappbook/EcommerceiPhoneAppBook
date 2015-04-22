@@ -8,6 +8,7 @@
 
 #import "PFTableViewCell.h"
 
+@class EMABOrderItem;
 @interface EMABOrderItemTableViewCell : PFTableViewCell
-
+-(void)configureItem:(EMABOrderItem *)item;
 @end

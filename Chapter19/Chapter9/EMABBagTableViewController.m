@@ -7,6 +7,9 @@
 //
 
 #import "EMABBagTableViewController.h"
+#import "EMABOrder.h"
+#import "EMABOrderItem.h"
+#import "EMABProduct.h"
 
 @implementation EMABBagTableViewController
 

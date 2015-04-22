@@ -17,7 +17,7 @@
 
 -(double)total
 {
-    double sum = 0.0;
+    double sum = 0.00;
     if (self.items) {
         for (EMABOrderItem *item in self.items) {
             sum += [item subTotal];
@@ -26,6 +26,9 @@
     return sum;
 }
 
+-(NSString *)friendlyTotal {
+    return [NSString stringWithFormat:@"%.2f",[self total]];
+}
 
 +(PFQuery *)basicQuery{
     PFQuery *query = [PFQuery queryWithClassName:[self parseClassName]];
