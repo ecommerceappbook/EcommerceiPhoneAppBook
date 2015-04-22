@@ -22,6 +22,6 @@
 }
 
 -(NSString *)friendlyQuantity {
-    return [NSString stringWithFormat:@"X%lld",self.quantity];
+    return [NSString stringWithFormat:@"X %lld",self.quantity];
 }
 @end

@@ -17,8 +17,6 @@
 @end
 
 @implementation EMABOrderItemTableViewCell
-
-
 -(void)configureItem:(EMABOrderItem *)item {
     self.nameLabel.text = item.product.name;
     self.unitPriceLabel.text = [item.product friendlyPrice];
