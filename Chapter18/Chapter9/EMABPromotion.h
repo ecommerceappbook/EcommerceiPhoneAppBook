@@ -7,9 +7,7 @@
 //
 
 #import <Parse/Parse.h>
-
 @interface EMABPromotion : PFObject<PFSubclassing>
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, strong)PFFile *image;
-
 @end

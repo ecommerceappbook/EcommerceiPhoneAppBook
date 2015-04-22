@@ -16,6 +16,7 @@
 #import "EMABOrder.h"
 #import "EMABPaymentMethod.h"
 #import "EMABFavoriteProduct.h"
+#import "EMABPromotion.h"
 @interface EMABAppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -33,6 +34,7 @@
     [EMABOrder registerSubclass];
     [EMABFavoriteProduct registerSubclass];
     [EMABPaymentMethod registerSubclass];
+    [EMABPromotion registerSubclass];
     
     [Parse setApplicationId:kParseApplicationID clientKey:kParseClientKey];
  
@@ -62,25 +64,8 @@
         }
     }
     
-    
-    // Extract the notification data
-    NSDictionary *notificationPayload = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
-    
-    // Create a pointer to the Photo object
-    NSString *photoId = [notificationPayload objectForKey:@"p"];
-    PFObject *targetPhoto = [PFObject objectWithoutDataWithClassName:@"Photo"
-                                                            objectId:photoId];
-    
-    // Fetch photo object
-    [targetPhoto fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        // Show photo view controller
-        if (!error && [PFUser currentUser]) {
-//            PhotoVC *viewController = [[PhotoVC alloc] initWithPhoto:object];
-//            [self.navController pushViewController:viewController animated:YES];
-        }
-    }];
-    
-    
+    [self handlePromotion:launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]];
+   
     return YES;
 }
 
@@ -136,6 +121,21 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     }
 }
 
-
+#pragma mark - handle Push Notification Promotion
+-(void)handlePromotion:(NSDictionary *)notificationPayload {
+     // Create a pointer to the Photo object
+     NSString *objectId = [notificationPayload objectForKey:@"p"];
+     EMABPromotion *promotion = (EMABPromotion *)[PFObject objectWithoutDataWithClassName:kPromotion
+                                                             objectId:objectId];
+     [promotion fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        // Show photo view controller
+        if (!error) {
+            //            PhotoVC *viewController = [[PhotoVC alloc] initWithPhoto:object];
+            //            [self.navController pushViewController:viewController animated:YES];
+            
+            
+        }
+    }];
+}
 
 @end

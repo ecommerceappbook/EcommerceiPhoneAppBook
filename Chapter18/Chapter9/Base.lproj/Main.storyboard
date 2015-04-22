@@ -130,6 +130,40 @@
             </objects>
             <point key="canvasLocation" x="585" y="12"/>
         </scene>
+        <!--Promotion View Controller-->
+        <scene sceneID="gfU-ZL-R4C">
+            <objects>
+                <viewController storyboardIdentifier="EMABPromotionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xoB-dn-OKy" customClass="EMABPromotionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tW5-wd-ACS"/>
+                        <viewControllerLayoutGuide type="bottom" id="mFM-kt-Qel"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4mU-0z-bFS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSj-tc-FZO">
+                                <rect key="frame" x="20" y="64" width="280" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u3i-3d-1bW" customClass="PFImageView">
+                                <rect key="frame" x="0.0" y="157" width="320" height="411"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="contentLabel" destination="GSj-tc-FZO" id="Ubo-gi-YKC"/>
+                        <outlet property="imageView" destination="u3i-3d-1bW" id="uLP-sx-OOW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7j5-Go-e7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="1861"/>
+        </scene>
         <!--My Account-->
         <scene sceneID="jhC-Pw-15F">
             <objects>

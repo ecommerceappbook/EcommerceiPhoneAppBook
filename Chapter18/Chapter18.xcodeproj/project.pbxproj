@@ -10,6 +10,7 @@
 		7D1B21111AE6AA71001D869F /* EMABEmailTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21101AE6AA71001D869F /* EMABEmailTextField.m */; };
 		7D1B21141AE6AA8E001D869F /* EMABPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21131AE6AA8E001D869F /* EMABPasswordTextField.m */; };
 		7D1B21171AE7F3C7001D869F /* EMABPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21161AE7F3C7001D869F /* EMABPromotion.m */; };
+		7D1B211A1AE7F518001D869F /* EMABPromotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B21191AE7F518001D869F /* EMABPromotionViewController.m */; };
 		7D7DCCED1AE54EE4008597C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DCCEC1AE54EE4008597C8 /* main.m */; };
 		7D7DCCF91AE54EE4008597C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCCF71AE54EE4008597C8 /* Main.storyboard */; };
 		7D7DCCFE1AE54EE4008597C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCCFC1AE54EE4008597C8 /* LaunchScreen.xib */; };
@@ -65,6 +66,8 @@
 		7D1B21131AE6AA8E001D869F /* EMABPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPasswordTextField.m; sourceTree = "<group>"; };
 		7D1B21151AE7F3C7001D869F /* EMABPromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABPromotion.h; sourceTree = "<group>"; };
 		7D1B21161AE7F3C7001D869F /* EMABPromotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPromotion.m; sourceTree = "<group>"; };
+		7D1B21181AE7F518001D869F /* EMABPromotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABPromotionViewController.h; sourceTree = "<group>"; };
+		7D1B21191AE7F518001D869F /* EMABPromotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPromotionViewController.m; sourceTree = "<group>"; };
 		7D7DCCE71AE54EE4008597C8 /* Chapter18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter18.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7DCCEB1AE54EE4008597C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7DCCEC1AE54EE4008597C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 				7D7DCD491AE54FF5008597C8 /* EMABUserPaymentMethodTableViewController.m */,
 				7D7DCD4A1AE54FF5008597C8 /* EMABUserProfileTableViewController.h */,
 				7D7DCD4B1AE54FF5008597C8 /* EMABUserProfileTableViewController.m */,
+				7D1B21181AE7F518001D869F /* EMABPromotionViewController.h */,
+				7D1B21191AE7F518001D869F /* EMABPromotionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				7D7DCD621AE54FF5008597C8 /* EMABProductTableViewCell.m in Sources */,
 				7D1B21141AE6AA8E001D869F /* EMABPasswordTextField.m in Sources */,
 				7D7DCD5A1AE54FF5008597C8 /* EMABOrderItem.m in Sources */,
+				7D1B211A1AE7F518001D869F /* EMABPromotionViewController.m in Sources */,
 				7D7DCD5C1AE54FF5008597C8 /* EMABPaymentMethod.m in Sources */,
 				7D7DCD571AE54FF5008597C8 /* EMABLoginViewController.m in Sources */,
 				7D7DCD641AE54FF5008597C8 /* EMABUser.m in Sources */,
