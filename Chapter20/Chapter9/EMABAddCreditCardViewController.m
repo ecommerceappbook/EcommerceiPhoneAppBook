@@ -29,7 +29,7 @@
 }
 
 - (void)onCancel:(id)sender {
-    self.cancelBlock(self);
+    self.cancelBlock();
 }
 
 - (void)onAuthorize:(id)sender {
@@ -76,7 +76,7 @@
 
 -(void)readyToCharge:(NSString *)customerId {
     [self dismissViewControllerAnimated:YES completion:^{
-        self.finishBlock(self, customerId);
+        self.finishBlock(customerId);
     }];
 }
 

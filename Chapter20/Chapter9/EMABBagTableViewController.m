@@ -17,6 +17,7 @@
 #import "EMABNoteViewController.h"
 #import "EMABUserProfileTableViewController.h"
 #import "EMABUserPaymentMethodTableViewController.h"
+#import "EMABAddCreditCardViewController.h"
 @interface EMABBagTableViewController(){
     BOOL shouldHide;
     BOOL hasCreditCard;
@@ -202,9 +203,19 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else {
         //we need to add a a credit card
-        
-        
+        EMABAddCreditCardViewController *viewController = (EMABAddCreditCardViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"EMABAddCreditCardViewController"];
+        viewController.cancelBlock = nil;
+        viewController.finishBlock = ^(NSString *customerId){
+            [self charge:customerId];
+        };
+        [self.navigationController pushViewController:viewController animated:YES];
     }
     
 }
+
+-(void)charge:(NSString *)customerId {
+    
+    
+}
+
 @end

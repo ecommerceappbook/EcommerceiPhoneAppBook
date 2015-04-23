@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 @class EMABAddCreditCardViewController;
-typedef void (^ViewControllerDidFinish)(EMABAddCreditCardViewController *viewController, NSString *customerId);
-typedef void (^ViewControllerDidCancel)(EMABAddCreditCardViewController *viewController);
+typedef void (^ViewControllerDidFinish)(NSString *customerId);
+typedef void (^ViewControllerDidCancel)();
 
 @interface EMABAddCreditCardViewController : UIViewController
 @property (nonatomic, copy) ViewControllerDidFinish finishBlock;
