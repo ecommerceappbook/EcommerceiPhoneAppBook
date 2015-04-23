@@ -14,6 +14,7 @@
 #import "EMABOrderItem.h"
 #import "EMABProduct.h"
 #import "EMABNoteViewController.h"
+#import "EMABUserProfileTableViewController.h"
 @interface EMABBagTableViewController(){
     BOOL shouldHide;
 }
@@ -89,7 +90,12 @@
 }
 
 -(IBAction)onPayWithCreditCard:(id)sender{
-    
+    if ([[EMABUser currentUser] isShippingAddressCompleted]) {
+        
+    } else {
+        EMABUserProfileTableViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EMABUserProfileTableViewController"];
+        
+    }
     
 }
 
@@ -97,6 +103,12 @@
     
     
 }
+
+-(void)charge{
+    //cloud code
+    
+}
+
 
 -(IBAction)onStepper:(id)sender {
     UIStepper *stepper = (UIStepper *)sender;

@@ -22,4 +22,5 @@
 
 +(EMABUser *)currentUser;
 
+-(BOOL)isShippingAddressCompleted;
 @end
