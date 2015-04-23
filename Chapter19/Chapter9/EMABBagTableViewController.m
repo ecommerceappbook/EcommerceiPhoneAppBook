@@ -17,6 +17,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *ordeNoLabel;
 @property (nonatomic, weak) IBOutlet UILabel *ordeDateLabel;
 @property (nonatomic, weak) IBOutlet UILabel *totalLabel;
+@property (nonatomic, weak) IBOutlet UIView *noItemsCoverView;
+@property (nonatomic, weak) IBOutlet UILabel *noItemsLabel;
 
 @property (nonatomic, strong) EMABOrder *order;
 @end
@@ -42,6 +44,15 @@
         }
     }];
 }
+
+#pragma mark - Handle No Items
+-(void)handleNoItems{
+    if (!self.order || [self.order.items count] == 0) {
+        self.noItemsCoverView.hidden = NO;
+        self.noItemsLabel.hidden = NO;
+    }
+}
+
 
 #pragma mark - IBAction
 -(IBAction)onNote:(id)sender {
