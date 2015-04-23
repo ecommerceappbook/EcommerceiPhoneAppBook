@@ -14,5 +14,11 @@
 +(EMABUser *)currentUser{
     return (EMABUser *)[PFUser currentUser];
 }
-
+-(BOOL)isShippingAddressCompleted{
+    BOOL cont0 = self.address1 && [self.address1 length] > 0;
+    BOOL cont1 = self.city && [self.city length] > 0;
+    BOOL cont2 = self.state && self.state > 0;
+    BOOL cont3 = self.zipcode && self.zipcode > 0;
+    return cont0 && cont1 && cont1 && cont2 && cont3;
+}
 @end

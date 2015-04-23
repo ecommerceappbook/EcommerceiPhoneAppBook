@@ -21,5 +21,5 @@
 @property (nonatomic, copy) PFFile *photo;
 
 +(EMABUser *)currentUser;
-
+-(BOOL)isShippingAddressCompleted;
 @end
