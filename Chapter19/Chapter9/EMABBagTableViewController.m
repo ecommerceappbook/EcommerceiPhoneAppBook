@@ -13,12 +13,12 @@
 #import "EMABOrder.h"
 #import "EMABOrderItem.h"
 #import "EMABProduct.h"
-@interface EMABBagTableViewController()
+@interface EMABBagTableViewController(){
+    BOOL shouldHide;
+}
 @property (nonatomic, weak) IBOutlet UILabel *ordeNoLabel;
 @property (nonatomic, weak) IBOutlet UILabel *ordeDateLabel;
 @property (nonatomic, weak) IBOutlet UILabel *totalLabel;
-@property (nonatomic, weak) IBOutlet UIView *noItemsCoverView;
-@property (nonatomic, weak) IBOutlet UILabel *noItemsLabel;
 
 @property (nonatomic, strong) EMABOrder *order;
 @end
@@ -27,6 +27,7 @@
 
 -(void)viewDidLoad
 {
+    shouldHide = false;
     [self queryForUnfinishedOrder];
 }
 
@@ -41,15 +42,19 @@
             self.ordeDateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
             self.totalLabel.text = [self.order friendlyTotal];
             [self.tableView reloadData];
+        } else {
+            shouldHide = true;
         }
     }];
 }
 
 #pragma mark - Handle No Items
 -(void)handleNoItems{
-    if (!self.order || [self.order.items count] == 0) {
-        self.noItemsCoverView.hidden = NO;
-        self.noItemsLabel.hidden = NO;
+    if (shouldHide) {
+        self.ordeNoLabel.text = NSLocalizedString(@"There is no items in your bag.", @"There is no items in your bag.");
+        self.tableView.tableFooterView.hidden = YES;
+        self.navigationItem.rightBarButtonItem.enabled = false;
+        [self.tableView reloadData];
     }
 }
 
