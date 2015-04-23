@@ -81,9 +81,31 @@
 }
 
 -(IBAction)onStepper:(id)sender {
-    //we need to update the quantity
+    UIStepper *stepper = (UIStepper *)sender;
+    NSInteger index = stepper.tag - 100;
+    NSMutableArray *orderItems = [NSMutableArray arrayWithArray:self.order.items];
+    EMABOrderItem *orderItem = orderItems[index];
+    orderItem.quantity = (int)stepper.value;
     
-    self.totalLabel.text = [self.order friendlyTotal];
+    if ((int)stepper.value == 0) {
+        [orderItems removeObjectAtIndex:index];
+    } else {
+        [orderItems replaceObjectAtIndex:index withObject:orderItem];
+    }
+    
+    if ([orderItems count] == 0) {
+        shouldHide = nil;
+        [self handleNoItems];
+        [self.order deleteInBackgroundWithBlock:^(BOOL success, NSError *error){
+            if (!error) {
+                // we let us know
+            }
+        }];
+    } else {
+        self.order.items = [orderItems copy];
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+        self.totalLabel.text = [self.order friendlyTotal];
+    }
     
 }
 
@@ -104,7 +126,7 @@
     return cell;
 }
 
-#pragma  mark - No Items
+#pragma  mark - Setters
 -(UIView *)noItemsCoverView {
     if (!_noItemsCoverView) {
         self.noItemsCoverView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.tableView.frame.size.width, self.tableView.frame.size.height)];
