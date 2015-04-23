@@ -45,6 +45,7 @@
 		7D7DCD6A1AE54FF5008597C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD4C1AE54FF5008597C8 /* Images.xcassets */; };
 		7D7DCD6B1AE54FF5008597C8 /* LoginSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD4D1AE54FF5008597C8 /* LoginSignup.storyboard */; };
 		7D7DCD6C1AE54FF5008597C8 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD4E1AE54FF5008597C8 /* Base.lproj */; };
+		7DBDCFC21AE93AF60014096F /* EMABNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDCFC11AE93AF60014096F /* EMABNoteViewController.m */; };
 		E26BD0B4DFC957C6E2A1374E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 810AEC6258EEF08D504E9B95 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,8 @@
 		7D7DCD4C1AE54FF5008597C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7D7DCD4D1AE54FF5008597C8 /* LoginSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSignup.storyboard; sourceTree = "<group>"; };
 		7D7DCD4E1AE54FF5008597C8 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		7DBDCFC01AE93AF60014096F /* EMABNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABNoteViewController.h; sourceTree = "<group>"; };
+		7DBDCFC11AE93AF60014096F /* EMABNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABNoteViewController.m; sourceTree = "<group>"; };
 		810AEC6258EEF08D504E9B95 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63CDAD457AE334B68A6ECCC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -306,6 +309,8 @@
 				7D7DCD4B1AE54FF5008597C8 /* EMABUserProfileTableViewController.m */,
 				7D1B21181AE7F518001D869F /* EMABPromotionViewController.h */,
 				7D1B21191AE7F518001D869F /* EMABPromotionViewController.m */,
+				7DBDCFC01AE93AF60014096F /* EMABNoteViewController.h */,
+				7DBDCFC11AE93AF60014096F /* EMABNoteViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				7D7DCD501AE54FF5008597C8 /* EMABBagTableViewController.m in Sources */,
 				7D7DCD5F1AE54FF5008597C8 /* EMABProductDetailViewController.m in Sources */,
 				7D7DCD551AE54FF5008597C8 /* EMABDispatchViewController.m in Sources */,
+				7DBDCFC21AE93AF60014096F /* EMABNoteViewController.m in Sources */,
 				7D7DCD521AE54FF5008597C8 /* EMABCategory.m in Sources */,
 				7D7DCD5E1AE54FF5008597C8 /* EMABProduct.m in Sources */,
 				7D7DCD651AE54FF5008597C8 /* EMABUserAccountTableViewController.m in Sources */,

@@ -13,6 +13,7 @@
 #import "EMABOrder.h"
 #import "EMABOrderItem.h"
 #import "EMABProduct.h"
+#import "EMABNoteViewController.h"
 @interface EMABBagTableViewController(){
     BOOL shouldHide;
 }
@@ -27,10 +28,23 @@
 
 @implementation EMABBagTableViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self queryForUnfinishedOrder];
+}
+
 -(void)viewDidLoad
 {
     shouldHide = false;
-    [self queryForUnfinishedOrder];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    if (self.order && self.order.isDirty) {
+        [self.order saveInBackground];
+    }
 }
 
 -(void)queryForUnfinishedOrder {
@@ -65,10 +79,14 @@
 
 #pragma mark - IBAction
 -(IBAction)onNote:(id)sender {
-    
-    
+    EMABNoteViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EMABNoteViewController"];
+    viewController.cancelBlock = ^(EMABNoteViewController *viewController){
+        
+    };
+    viewController.finishBlock = ^(EMABNoteViewController *viewController, NSString *note){
+        self.order.customerNote = note;
+    };
 }
-
 
 -(IBAction)onPayWithCreditCard:(id)sender{
     

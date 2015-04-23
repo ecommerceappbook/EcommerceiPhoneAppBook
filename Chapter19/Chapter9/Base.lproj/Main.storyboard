@@ -123,6 +123,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="lI0-8u-PBL">
                             <connections>
                                 <action selector="onNote:" destination="0hX-v0-CLX" id="VCh-5G-JKo"/>
+                                <segue destination="XX9-3I-4Xj" kind="show" id="fIN-5v-8HR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,6 +136,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buV-9D-bTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="585" y="12"/>
+        </scene>
+        <!--Note-->
+        <scene sceneID="16w-jm-Sza">
+            <objects>
+                <viewController storyboardIdentifier="EMABNoteViewController" id="XX9-3I-4Xj" customClass="EMABNoteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KRG-Yl-Tcw"/>
+                        <viewControllerLayoutGuide type="bottom" id="609-7x-mYb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XhL-8I-7M4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Can we receive this order by Friday? " translatesAutoresizingMaskIntoConstraints="NO" id="2Z7-nj-i1t">
+                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Note" id="caq-Lu-zVO">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ubs-mc-46j">
+                            <connections>
+                                <action selector="onCancel:" destination="XX9-3I-4Xj" id="VHL-QS-jvW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="dCT-m7-TAd">
+                            <connections>
+                                <action selector="onDone:" destination="XX9-3I-4Xj" id="7kK-Zj-1im"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="noteTextView" destination="2Z7-nj-i1t" id="q4q-yk-5OF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hND-h6-1DB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="12"/>
         </scene>
         <!--Promotion View Controller-->
         <scene sceneID="gfU-ZL-R4C">
@@ -364,7 +407,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJY-Lh-oZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="288"/>
+            <point key="canvasLocation" x="955" y="668"/>
         </scene>
         <!--Favorite Products-->
         <scene sceneID="Wp3-00-UjF">
@@ -409,7 +452,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqP-9X-pKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="1644"/>
+            <point key="canvasLocation" x="826" y="1716"/>
         </scene>
         <!--History-->
         <scene sceneID="Q7C-tz-jOC">
@@ -495,7 +538,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Lg-BS-POz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="1319"/>
+            <point key="canvasLocation" x="1390" y="1535"/>
         </scene>
         <!--Payment Methods-->
         <scene sceneID="7Ga-A6-xbk">
@@ -545,7 +588,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovj-uB-4wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="667"/>
+            <point key="canvasLocation" x="1606" y="879"/>
         </scene>
         <!--My Account-->
         <scene sceneID="95Z-vr-gGS">
