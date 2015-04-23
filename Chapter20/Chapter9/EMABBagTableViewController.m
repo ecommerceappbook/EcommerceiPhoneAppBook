@@ -13,11 +13,13 @@
 #import "EMABOrder.h"
 #import "EMABOrderItem.h"
 #import "EMABProduct.h"
+#import "EMABPaymentMethod.h"
 #import "EMABNoteViewController.h"
 #import "EMABUserProfileTableViewController.h"
-
+#import "EMABUserPaymentMethodTableViewController.h"
 @interface EMABBagTableViewController(){
     BOOL shouldHide;
+    BOOL hasCreditCard;
 }
 @property (nonatomic, weak) IBOutlet UILabel *ordeNoLabel;
 @property (nonatomic, weak) IBOutlet UILabel *ordeDateLabel;
@@ -26,6 +28,7 @@
 @property (nonatomic, strong) UILabel *noItemsInfoLabel;
 
 @property (nonatomic, strong) EMABOrder *order;
+@property (nonatomic, weak) NSArray *creditCards;
 @end
 
 @implementation EMABBagTableViewController
@@ -39,7 +42,7 @@
 -(void)viewDidLoad
 {
     shouldHide = false;
-    
+    hasCreditCard = false;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -60,8 +63,21 @@
             self.ordeDateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
             self.totalLabel.text = [self.order friendlyTotal];
             [self.tableView reloadData];
+            
+            // we check if this customer has a credit card as soon as possible
+            [self queryForPaymentMethod];
+            
         } else {
             shouldHide = true;
+        }
+    }];
+}
+
+-(void)queryForPaymentMethod {
+    PFQuery *paymentQuery = [EMABPaymentMethod queryForOwner:[EMABUser currentUser]];
+    [paymentQuery findObjectsInBackgroundWithBlock:^(NSArray *object, NSError *error){
+        if (!error) {
+            hasCreditCard = true;
         }
     }];
 }
@@ -93,10 +109,10 @@
 -(IBAction)onPayWithCreditCard:(id)sender{
     
     if ([[EMABUser currentUser] isShippingAddressCompleted]) {
-        
+        [self selectCreditCard];
     } else {
         EMABUserProfileTableViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EMABUserProfileTableViewController"];
-        
+        [self.navigationController pushViewController:viewController animated:YES];
     }
 
 }
@@ -178,4 +194,17 @@
     return _noItemsInfoLabel;
 }
 
+#pragma mark - Credit Card Helper
+- (void)selectCreditCard
+{
+    if (hasCreditCard) {
+        EMABUserPaymentMethodTableViewController *viewController = (EMABUserPaymentMethodTableViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"EMABUserPaymentMethodTableViewController"];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else {
+        //we need to add a a credit card
+        
+        
+    }
+    
+}
 @end
