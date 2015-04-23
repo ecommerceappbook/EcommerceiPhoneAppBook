@@ -10,7 +10,19 @@
 #define COCOAPODS_POD_AVAILABLE_Bolts
 #define COCOAPODS_VERSION_MAJOR_Bolts 1
 #define COCOAPODS_VERSION_MINOR_Bolts 1
-#define COCOAPODS_VERSION_PATCH_Bolts 4
+#define COCOAPODS_VERSION_PATCH_Bolts 5
+
+// Bolts/AppLinks
+#define COCOAPODS_POD_AVAILABLE_Bolts_AppLinks
+#define COCOAPODS_VERSION_MAJOR_Bolts_AppLinks 1
+#define COCOAPODS_VERSION_MINOR_Bolts_AppLinks 1
+#define COCOAPODS_VERSION_PATCH_Bolts_AppLinks 5
+
+// Bolts/Tasks
+#define COCOAPODS_POD_AVAILABLE_Bolts_Tasks
+#define COCOAPODS_VERSION_MAJOR_Bolts_Tasks 1
+#define COCOAPODS_VERSION_MINOR_Bolts_Tasks 1
+#define COCOAPODS_VERSION_PATCH_Bolts_Tasks 5
 
 // Facebook-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK
@@ -35,4 +47,22 @@
 #define COCOAPODS_VERSION_MAJOR_ParseUI 1
 #define COCOAPODS_VERSION_MINOR_ParseUI 1
 #define COCOAPODS_VERSION_PATCH_ParseUI 3
+
+// Stripe
+#define COCOAPODS_POD_AVAILABLE_Stripe
+#define COCOAPODS_VERSION_MAJOR_Stripe 3
+#define COCOAPODS_VERSION_MINOR_Stripe 1
+#define COCOAPODS_VERSION_PATCH_Stripe 0
+
+// Stripe/ApplePay
+#define COCOAPODS_POD_AVAILABLE_Stripe_ApplePay
+#define COCOAPODS_VERSION_MAJOR_Stripe_ApplePay 3
+#define COCOAPODS_VERSION_MINOR_Stripe_ApplePay 1
+#define COCOAPODS_VERSION_PATCH_Stripe_ApplePay 0
+
+// Stripe/Core
+#define COCOAPODS_POD_AVAILABLE_Stripe_Core
+#define COCOAPODS_VERSION_MAJOR_Stripe_Core 3
+#define COCOAPODS_VERSION_MINOR_Stripe_Core 1
+#define COCOAPODS_VERSION_PATCH_Stripe_Core 0
 

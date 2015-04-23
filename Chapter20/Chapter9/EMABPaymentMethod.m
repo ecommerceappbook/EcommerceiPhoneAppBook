@@ -36,4 +36,39 @@
     [query whereKey:@"owner" equalTo:owner];
     return query;
 }
+-(NSString *)friendlyType:(STPCardBrand)brand{
+//    STPCardBrandVisa,
+//    STPCardBrandAmex,
+//    STPCardBrandMasterCard,
+//    STPCardBrandDiscover,
+//    STPCardBrandJCB,
+//    STPCardBrandDinersClub,
+//    STPCardBrandUnknown,
+    NSString *title = @"";
+    switch (brand) {
+        case STPCardBrandVisa:
+            title = @"Visa";
+            break;
+        case STPCardBrandAmex:
+            title = @"American Express";
+            break;
+        case STPCardBrandMasterCard:
+            title = @"MasterCard";
+            break;
+        case STPCardBrandDiscover:
+            title = @"Discover";
+            break;
+        case STPCardBrandJCB:
+            title = @"JCB";
+            break;
+        case STPCardBrandDinersClub:
+            title = @"Dinner Club";
+            break;
+        default:
+            title = @"Unknown";
+            break;
+    }
+    return title;
+}
+
 @end

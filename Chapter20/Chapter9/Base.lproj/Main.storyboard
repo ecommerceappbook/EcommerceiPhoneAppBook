@@ -590,6 +590,43 @@
             </objects>
             <point key="canvasLocation" x="1606" y="879"/>
         </scene>
+        <!--Add Credit Card View Controller-->
+        <scene sceneID="jWS-mM-ZFv">
+            <objects>
+                <viewController storyboardIdentifier="EMABAddCreditCardViewController" id="ltv-7D-LhA" customClass="EMABAddCreditCardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a4x-aK-XAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="RiS-WX-jbD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uqP-fB-n2s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRI-7w-awc" customClass="PTKView">
+                                <rect key="frame" x="15" y="108" width="290" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="At ease, we don't save anything." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTW-Ty-98j">
+                                <rect key="frame" x="15" y="51" width="289" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="power_by_stripe" translatesAutoresizingMaskIntoConstraints="NO" id="4Hu-a0-s6t">
+                                <rect key="frame" x="86" y="200" width="149" height="41"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="paymentView" destination="ZRI-7w-awc" id="75c-9h-XAr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0X-9O-ci2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="0.0"/>
+        </scene>
         <!--My Account-->
         <scene sceneID="95Z-vr-gGS">
             <objects>
@@ -952,6 +989,7 @@
         <image name="default_promotion" width="194" height="316"/>
         <image name="first" width="30" height="30"/>
         <image name="heart" width="44" height="44"/>
+        <image name="power_by_stripe" width="149" height="41"/>
         <image name="product_1" width="350" height="350"/>
         <image name="second" width="30" height="30"/>
         <image name="third" width="23" height="24"/>

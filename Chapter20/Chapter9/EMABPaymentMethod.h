@@ -7,6 +7,7 @@
 //
 
 #import <Parse/Parse.h>
+#import "Stripe.h"
 @class EMABUser;
 @interface EMABPaymentMethod : PFObject<PFSubclassing>
 @property (nonatomic, copy) NSString *type;
@@ -19,4 +20,5 @@
 -(NSString *)friendlyExpirationMonthYear;
 +(PFQuery *)basicQuery;
 +(PFQuery *)queryForOwner:(EMABUser *)owner;
+-(NSString *)friendlyType:(STPCardBrand)brand;
 @end
