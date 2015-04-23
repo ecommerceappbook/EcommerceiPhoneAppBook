@@ -28,7 +28,7 @@
 }
 
 - (void)onCancel:(id)sender {
-    self.cancelBlock();
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)onAuthorize:(id)sender {

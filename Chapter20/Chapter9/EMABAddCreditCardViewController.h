@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 @class EMABAddCreditCardViewController;
 typedef void (^AddCreditCardViewControllerDidFinish)(NSString *customerId);
-typedef void (^AddCreditCardViewControllerDidCancel)();
 
 @interface EMABAddCreditCardViewController : UIViewController
 @property (nonatomic, copy) AddCreditCardViewControllerDidFinish finishBlock;
-@property (nonatomic, copy) AddCreditCardViewControllerDidCancel cancelBlock;
 @end

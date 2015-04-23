@@ -204,7 +204,6 @@
     } else {
         //we need to add a a credit card
         EMABAddCreditCardViewController *viewController = (EMABAddCreditCardViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"EMABAddCreditCardViewController"];
-        viewController.cancelBlock = nil;
         viewController.finishBlock = ^(NSString *customerId){
             [self charge:customerId];
         };
@@ -214,8 +213,16 @@
 }
 
 -(void)charge:(NSString *)customerId {
-    
-    
+    [self.order saveInBackgroundWithBlock:^(BOOL success, NSError *error){
+        if (!error) {
+            NSDictionary *params = @{@"customerId":customerId, @"orderId":self.order.objectId};
+            [PFCloud callFunctionInBackground:@"Charge" withParameters:params block:^(NSString *message, NSError *error){
+                if (!error) {
+                    [self handleNoItems];
+                }
+            }];
+        }
+    }];
 }
 
 @end
