@@ -19,6 +19,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *ordeNoLabel;
 @property (nonatomic, weak) IBOutlet UILabel *ordeDateLabel;
 @property (nonatomic, weak) IBOutlet UILabel *totalLabel;
+@property (nonatomic, strong) UIView *noItemsCoverView;
+@property (nonatomic, strong) UILabel *noItemsInfoLabel;
 
 @property (nonatomic, strong) EMABOrder *order;
 @end
@@ -51,10 +53,12 @@
 #pragma mark - Handle No Items
 -(void)handleNoItems{
     if (shouldHide) {
-        self.ordeNoLabel.text = NSLocalizedString(@"There is no items in your bag.", @"There is no items in your bag.");
-        self.tableView.tableFooterView.hidden = YES;
+        self.noItemsCoverView.hidden = !shouldHide;
+        self.noItemsInfoLabel.hidden  = !shouldHide;
+        [self.noItemsCoverView addSubview:self.noItemsInfoLabel];
+        [self.view addSubview:self.noItemsCoverView];
+        [self.view bringSubviewToFront:self.noItemsCoverView];
         self.navigationItem.rightBarButtonItem.enabled = false;
-        [self.tableView reloadData];
     }
 }
 
@@ -100,5 +104,30 @@
     return cell;
 }
 
+#pragma  mark - No Items
+-(UIView *)noItemsCoverView {
+    if (!_noItemsCoverView) {
+        self.noItemsCoverView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.tableView.frame.size.width, self.tableView.frame.size.height)];
+        self.noItemsCoverView.backgroundColor  = [UIColor whiteColor];
+        self.noItemsCoverView.hidden = YES;
+    }
+    
+    return _noItemsCoverView;
+    
+}
+
+-(UILabel *)noItemsInfoLabel {
+    
+    if (_noItemsInfoLabel) {
+        self.noItemsInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 80.0, self.tableView.frame.size.width, self.tableView.frame.size.height)];
+        self.noItemsInfoLabel.numberOfLines = 0;
+        self.noItemsInfoLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        self.noItemsInfoLabel.font = [UIFont boldSystemFontOfSize:14.0];
+        self.noItemsInfoLabel.hidden = YES;
+        self.noItemsInfoLabel.text = NSLocalizedString(@"There is no items in your bag.", @"There is no items in your bag.");
+    }
+    
+    return _noItemsInfoLabel;
+}
 
 @end
