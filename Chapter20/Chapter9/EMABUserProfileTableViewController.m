@@ -1,5 +1,5 @@
 //
-//  EMABUserProfileTableViewController.m
+//  EMABcustomerProfileTableViewController.m
 //  Chapter7
 //
 //  Created by Liangjun Jiang on 4/19/15.
@@ -101,18 +101,16 @@ static NSString *kKeyboardKey = @"keyboardTypeKey";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
     return [self.dataSourceArray count];
 }
 
 
 - (EMABUserProfileTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    EMABUserProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserProfile" forIndexPath:indexPath];
+    EMABUserProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"customerProfile" forIndexPath:indexPath];
     
     NSInteger row = indexPath.row;
     cell.textField.delegate = self;
@@ -158,5 +156,57 @@ static NSString *kKeyboardKey = @"keyboardTypeKey";
     [cell setContentForTableCellLabel:title placeHolder:placeholder text:text keyBoardType:keyboardType enabled:self.isEditing];
     return cell;
 }
+
+#pragma mark - UITextField Delegate methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    switch (textField.tag) {
+        case 100:
+            self.customer.firstName = textField.text;
+            break;
+        case 101:
+            self.customer.lastName = textField.text;
+            break;
+        case 102:
+            self.customer.phone = textField.text;
+            break;
+        case 103:
+            self.customer.email = textField.text;
+            break;
+        case 104:
+            self.customer.address1 = textField.text;
+            break;
+        case 105:
+            self.customer.address2 = textField.text;
+            break;
+        case 106:
+            self.customer.city = textField.text;
+            break;
+        case 107:
+            self.customer.state = textField.text;
+            break;
+        case 108:
+            self.customer.zipcode = textField.text;
+            break;
+        default:
+            break;
+    }
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 @end
