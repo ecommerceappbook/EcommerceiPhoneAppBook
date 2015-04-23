@@ -45,6 +45,7 @@
 		7D7DCD6A1AE54FF5008597C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD4C1AE54FF5008597C8 /* Images.xcassets */; };
 		7D7DCD6B1AE54FF5008597C8 /* LoginSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD4D1AE54FF5008597C8 /* LoginSignup.storyboard */; };
 		7D7DCD6C1AE54FF5008597C8 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD4E1AE54FF5008597C8 /* Base.lproj */; };
+		7DA7665D1AE98A3B000AB662 /* EMABAddCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7665C1AE98A3B000AB662 /* EMABAddCreditCardViewController.m */; };
 		7DBDCFC21AE93AF60014096F /* EMABNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDCFC11AE93AF60014096F /* EMABNoteViewController.m */; };
 		7DBDCFC51AE9549C0014096F /* EMABUserProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDCFC41AE9549C0014096F /* EMABUserProfileTableViewCell.m */; };
 		E26BD0B4DFC957C6E2A1374E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 810AEC6258EEF08D504E9B95 /* libPods.a */; };
@@ -135,6 +136,8 @@
 		7D7DCD4C1AE54FF5008597C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7D7DCD4D1AE54FF5008597C8 /* LoginSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSignup.storyboard; sourceTree = "<group>"; };
 		7D7DCD4E1AE54FF5008597C8 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		7DA7665B1AE98A3B000AB662 /* EMABAddCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABAddCreditCardViewController.h; sourceTree = "<group>"; };
+		7DA7665C1AE98A3B000AB662 /* EMABAddCreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABAddCreditCardViewController.m; sourceTree = "<group>"; };
 		7DBDCFC01AE93AF60014096F /* EMABNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABNoteViewController.h; sourceTree = "<group>"; };
 		7DBDCFC11AE93AF60014096F /* EMABNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABNoteViewController.m; sourceTree = "<group>"; };
 		7DBDCFC31AE9549C0014096F /* EMABUserProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserProfileTableViewCell.h; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 				7D1B21191AE7F518001D869F /* EMABPromotionViewController.m */,
 				7DBDCFC01AE93AF60014096F /* EMABNoteViewController.h */,
 				7DBDCFC11AE93AF60014096F /* EMABNoteViewController.m */,
+				7DA7665B1AE98A3B000AB662 /* EMABAddCreditCardViewController.h */,
+				7DA7665C1AE98A3B000AB662 /* EMABAddCreditCardViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 				7DBDCFC51AE9549C0014096F /* EMABUserProfileTableViewCell.m in Sources */,
 				7D7DCD5D1AE54FF5008597C8 /* EMABPaymentMethodTableViewCell.m in Sources */,
 				7D7DCD671AE54FF5008597C8 /* EMABUserOrderHistoryTableViewController.m in Sources */,
+				7DA7665D1AE98A3B000AB662 /* EMABAddCreditCardViewController.m in Sources */,
 				7D7DCD611AE54FF5008597C8 /* EMABProductsTableViewController.m in Sources */,
 				7D7DCD4F1AE54FF5008597C8 /* EMABAppDelegate.m in Sources */,
 				7D7DCD511AE54FF5008597C8 /* EMABCategoriesTableViewController.m in Sources */,
