@@ -46,6 +46,7 @@
 		7D7DCD6B1AE54FF5008597C8 /* LoginSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD4D1AE54FF5008597C8 /* LoginSignup.storyboard */; };
 		7D7DCD6C1AE54FF5008597C8 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7D7DCD4E1AE54FF5008597C8 /* Base.lproj */; };
 		7DBDCFC21AE93AF60014096F /* EMABNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDCFC11AE93AF60014096F /* EMABNoteViewController.m */; };
+		7DBDCFC51AE9549C0014096F /* EMABUserProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDCFC41AE9549C0014096F /* EMABUserProfileTableViewCell.m */; };
 		E26BD0B4DFC957C6E2A1374E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 810AEC6258EEF08D504E9B95 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,12 +70,12 @@
 		7D1B21161AE7F3C7001D869F /* EMABPromotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPromotion.m; sourceTree = "<group>"; };
 		7D1B21181AE7F518001D869F /* EMABPromotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABPromotionViewController.h; sourceTree = "<group>"; };
 		7D1B21191AE7F518001D869F /* EMABPromotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABPromotionViewController.m; sourceTree = "<group>"; };
-		7D7DCCE71AE54EE4008597C8 /* Chapter19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter19.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7DCCE71AE54EE4008597C8 /* Chapter20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7DCCEB1AE54EE4008597C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7DCCEC1AE54EE4008597C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D7DCCF81AE54EE4008597C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D7DCCFD1AE54EE4008597C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7D7DCD031AE54EE4008597C8 /* Chapter19Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chapter19Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7DCD031AE54EE4008597C8 /* Chapter20Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chapter20Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7DCD081AE54EE4008597C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7DCD091AE54EE4008597C8 /* Chapter9Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chapter9Tests.m; sourceTree = "<group>"; };
 		7D7DCD161AE54FF5008597C8 /* EMABAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABAppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +137,8 @@
 		7D7DCD4E1AE54FF5008597C8 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		7DBDCFC01AE93AF60014096F /* EMABNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABNoteViewController.h; sourceTree = "<group>"; };
 		7DBDCFC11AE93AF60014096F /* EMABNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABNoteViewController.m; sourceTree = "<group>"; };
+		7DBDCFC31AE9549C0014096F /* EMABUserProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMABUserProfileTableViewCell.h; sourceTree = "<group>"; };
+		7DBDCFC41AE9549C0014096F /* EMABUserProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMABUserProfileTableViewCell.m; sourceTree = "<group>"; };
 		810AEC6258EEF08D504E9B95 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63CDAD457AE334B68A6ECCC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,8 +184,8 @@
 		7D7DCCE81AE54EE4008597C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D7DCCE71AE54EE4008597C8 /* Chapter19.app */,
-				7D7DCD031AE54EE4008597C8 /* Chapter19Tests.xctest */,
+				7D7DCCE71AE54EE4008597C8 /* Chapter20.app */,
+				7D7DCD031AE54EE4008597C8 /* Chapter20Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +277,8 @@
 				7D1B21101AE6AA71001D869F /* EMABEmailTextField.m */,
 				7D1B21121AE6AA8E001D869F /* EMABPasswordTextField.h */,
 				7D1B21131AE6AA8E001D869F /* EMABPasswordTextField.m */,
+				7DBDCFC31AE9549C0014096F /* EMABUserProfileTableViewCell.h */,
+				7DBDCFC41AE9549C0014096F /* EMABUserProfileTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -327,9 +332,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D7DCCE61AE54EE4008597C8 /* Chapter19 */ = {
+		7D7DCCE61AE54EE4008597C8 /* Chapter20 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter19" */;
+			buildConfigurationList = 7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter20" */;
 			buildPhases = (
 				1E24B3D32E990EAF3B02B945 /* Check Pods Manifest.lock */,
 				7D7DCCE31AE54EE4008597C8 /* Sources */,
@@ -341,14 +346,14 @@
 			);
 			dependencies = (
 			);
-			name = Chapter19;
+			name = Chapter20;
 			productName = Chapter9;
-			productReference = 7D7DCCE71AE54EE4008597C8 /* Chapter19.app */;
+			productReference = 7D7DCCE71AE54EE4008597C8 /* Chapter20.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7D7DCD021AE54EE4008597C8 /* Chapter19Tests */ = {
+		7D7DCD021AE54EE4008597C8 /* Chapter20Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter19Tests" */;
+			buildConfigurationList = 7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter20Tests" */;
 			buildPhases = (
 				7D7DCCFF1AE54EE4008597C8 /* Sources */,
 				7D7DCD001AE54EE4008597C8 /* Frameworks */,
@@ -359,9 +364,9 @@
 			dependencies = (
 				7D7DCD051AE54EE4008597C8 /* PBXTargetDependency */,
 			);
-			name = Chapter19Tests;
+			name = Chapter20Tests;
 			productName = Chapter9Tests;
-			productReference = 7D7DCD031AE54EE4008597C8 /* Chapter19Tests.xctest */;
+			productReference = 7D7DCD031AE54EE4008597C8 /* Chapter20Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -382,7 +387,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter19" */;
+			buildConfigurationList = 7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter20" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -395,8 +400,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D7DCCE61AE54EE4008597C8 /* Chapter19 */,
-				7D7DCD021AE54EE4008597C8 /* Chapter19Tests */,
+				7D7DCCE61AE54EE4008597C8 /* Chapter20 */,
+				7D7DCD021AE54EE4008597C8 /* Chapter20Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -488,6 +493,7 @@
 				7D7DCD531AE54FF5008597C8 /* EMABCategoryTableViewCell.m in Sources */,
 				7D7DCD681AE54FF5008597C8 /* EMABUserPaymentMethodTableViewController.m in Sources */,
 				7D7DCD581AE54FF5008597C8 /* EMABOrder.m in Sources */,
+				7DBDCFC51AE9549C0014096F /* EMABUserProfileTableViewCell.m in Sources */,
 				7D7DCD5D1AE54FF5008597C8 /* EMABPaymentMethodTableViewCell.m in Sources */,
 				7D7DCD671AE54FF5008597C8 /* EMABUserOrderHistoryTableViewController.m in Sources */,
 				7D7DCD611AE54FF5008597C8 /* EMABProductsTableViewController.m in Sources */,
@@ -510,7 +516,7 @@
 /* Begin PBXTargetDependency section */
 		7D7DCD051AE54EE4008597C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7D7DCCE61AE54EE4008597C8 /* Chapter19 */;
+			target = 7D7DCCE61AE54EE4008597C8 /* Chapter20 */;
 			targetProxy = 7D7DCD041AE54EE4008597C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -623,7 +629,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Chapter9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Chapter19;
+				PRODUCT_NAME = Chapter20;
 			};
 			name = Debug;
 		};
@@ -635,7 +641,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Chapter9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Chapter19;
+				PRODUCT_NAME = Chapter20;
 			};
 			name = Release;
 		};
@@ -653,7 +659,7 @@
 				);
 				INFOPLIST_FILE = Chapter9Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Chapter19Tests;
+				PRODUCT_NAME = Chapter20Tests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chapter9.app/Chapter9";
 			};
 			name = Debug;
@@ -668,7 +674,7 @@
 				);
 				INFOPLIST_FILE = Chapter9Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Chapter19Tests;
+				PRODUCT_NAME = Chapter20Tests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chapter9.app/Chapter9";
 			};
 			name = Release;
@@ -676,7 +682,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter19" */ = {
+		7D7DCCE21AE54EE4008597C8 /* Build configuration list for PBXProject "Chapter20" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD0B1AE54EE4008597C8 /* Debug */,
@@ -685,7 +691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter19" */ = {
+		7D7DCD0D1AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter20" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD0E1AE54EE4008597C8 /* Debug */,
@@ -694,7 +700,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter19Tests" */ = {
+		7D7DCD101AE54EE4008597C8 /* Build configuration list for PBXNativeTarget "Chapter20Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7DCD111AE54EE4008597C8 /* Debug */,

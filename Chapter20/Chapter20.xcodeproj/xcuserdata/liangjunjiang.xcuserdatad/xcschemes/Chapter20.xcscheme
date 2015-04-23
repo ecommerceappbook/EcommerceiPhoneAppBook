@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7D7DCCE61AE54EE4008597C8"
-               BuildableName = "Chapter19.app"
-               BlueprintName = "Chapter19"
-               ReferencedContainer = "container:Chapter19.xcodeproj">
+               BuildableName = "Chapter20.app"
+               BlueprintName = "Chapter20"
+               ReferencedContainer = "container:Chapter20.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7D7DCCE61AE54EE4008597C8"
-            BuildableName = "Chapter19.app"
-            BlueprintName = "Chapter19"
-            ReferencedContainer = "container:Chapter19.xcodeproj">
+            BuildableName = "Chapter20.app"
+            BlueprintName = "Chapter20"
+            ReferencedContainer = "container:Chapter20.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7D7DCCE61AE54EE4008597C8"
-            BuildableName = "Chapter19.app"
-            BlueprintName = "Chapter19"
-            ReferencedContainer = "container:Chapter19.xcodeproj">
+            BuildableName = "Chapter20.app"
+            BlueprintName = "Chapter20"
+            ReferencedContainer = "container:Chapter20.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7D7DCCE61AE54EE4008597C8"
-            BuildableName = "Chapter19.app"
-            BlueprintName = "Chapter19"
-            ReferencedContainer = "container:Chapter19.xcodeproj">
+            BuildableName = "Chapter20.app"
+            BlueprintName = "Chapter20"
+            ReferencedContainer = "container:Chapter20.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
