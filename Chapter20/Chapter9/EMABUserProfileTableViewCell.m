@@ -8,10 +8,6 @@
 
 #import "EMABUserProfileTableViewCell.h"
 #import "EMABConstants.h"
-@interface EMABUserProfileTableViewCell()
-@property (nonatomic, strong) UITextField *textField;
-@end
-
 @implementation EMABUserProfileTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -34,13 +30,14 @@
         self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;	// has a clear 'x' button to the right
         
         self.accessoryView = self.textField;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
 
 
 
-- (void)setContentForTableCellLabel:(NSString*)title placeHolder:(NSString *)placeHolder :(NSString *)text keyBoardType:(NSNumber *)type enabled:(BOOL)enabled
+- (void)setContentForTableCellLabel:(NSString*)title placeHolder:(NSString *)placeHolder text:(NSString *)text keyBoardType:(NSNumber *)type enabled:(BOOL)enabled
 {
     self.textLabel.text = title;
     self.textField.text = text;

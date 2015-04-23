@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EMABUserProfileTableViewCell : UITableViewCell
-- (void)setContentForTableCellLabel:(NSString*)title placeHolder:(NSString *)placeHolder :(NSString *)text keyBoardType:(NSNumber *)type enabled:(BOOL)enabled;
+@property (nonatomic, strong) UITextField *textField;
+- (void)setContentForTableCellLabel:(NSString*)title placeHolder:(NSString *)placeHolder text:(NSString *)text keyBoardType:(NSNumber *)type enabled:(BOOL)enabled;
 @end

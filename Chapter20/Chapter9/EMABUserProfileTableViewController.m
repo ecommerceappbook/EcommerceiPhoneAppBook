@@ -7,92 +7,156 @@
 //
 
 #import "EMABUserProfileTableViewController.h"
+#import "EMABUserProfileTableViewCell.h"
+#import "EMABUser.h"
+static NSString *kTitleKey = @"titleKey";
+static NSString *kPlaceholderKey = @"placeholderKey";
+static NSString *kKeyboardKey = @"keyboardTypeKey";
 
-@interface EMABUserProfileTableViewController ()
 
+@interface EMABUserProfileTableViewController ()<UITextFieldDelegate>
+@property (nonatomic, strong) NSArray *dataSourceArray;
+@property (nonatomic, strong) EMABUser *customer;
 @end
 
 @implementation EMABUserProfileTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataSourceArray = @[
+                             @{
+                                 kTitleKey:NSLocalizedString(@"First Name", @"First Name"),
+                                 kPlaceholderKey:NSLocalizedString(@"First Name", @"First Name"),
+                                 kKeyboardKey:@(UIKeyboardTypeNamePhonePad)},
+                             @{
+                                 kTitleKey:NSLocalizedString(@"Last Name",@""),
+                                 kPlaceholderKey:NSLocalizedString(@"Last Name",@""),
+                                 kKeyboardKey:@(UIKeyboardTypeNamePhonePad)},
+                             
+                             @{
+                                 kTitleKey:NSLocalizedString(@"Phone",@""),
+                                 kPlaceholderKey:@"555-555-5555",
+                                 kKeyboardKey:@(UIKeyboardTypePhonePad)},
+                             
+                             
+                             @{
+                                 kTitleKey:NSLocalizedString(@"Email",@""),
+                                 kPlaceholderKey:@"Email",
+                                 kKeyboardKey:@(UIKeyboardTypeEmailAddress)},
+                             
+                             
+                             @{
+                                 kTitleKey:NSLocalizedString(@"Address 1",@""),
+                                 kPlaceholderKey:@"Address 1",
+                                 kKeyboardKey:@(UIKeyboardTypeDefault)},
+                             @{
+                                 kTitleKey:NSLocalizedString(@"Address 2",@""),
+                                 kPlaceholderKey:@"Address 2",
+                                 kKeyboardKey:@(UIKeyboardTypeDefault)},
+                             
+                             @{
+                                 kTitleKey:NSLocalizedString(@"City",@""),
+                                 kPlaceholderKey:NSLocalizedString(@"City",@""),
+                                 kKeyboardKey:@(UIKeyboardTypeDefault)},
+                             
+                             
+                             @{
+                                 kTitleKey:NSLocalizedString(@"State",@""),
+                                 kPlaceholderKey:NSLocalizedString(@"State",@""),
+                                 kKeyboardKey:@(UIKeyboardTypeDefault)},
+                             
+                             
+                             @{
+                                 kTitleKey:NSLocalizedString(@"Zipcode",@""),
+                                 kPlaceholderKey:@"#####",
+                                 kKeyboardKey:@(UIKeyboardTypeNumberPad)}
+                             ];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.customer = [EMABUser currentUser];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    [self.tableView reloadData];
+    
+    if (!editing) {
+        [self.customer saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+              
+                
+            }
+        }];
+        
+    }
 }
+
+-(void)onCancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return [self.dataSourceArray count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (EMABUserProfileTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    EMABUserProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserProfile" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSInteger row = indexPath.row;
+    cell.textField.delegate = self;
+    cell.textField.tag = 100 + row;
     
+    NSString *text = @"";
+    switch (row) {
+        case 0:
+            text = self.customer.firstName;
+            break;
+        case 1:
+            text = self.customer.lastName;
+            break;
+        case 2:
+            text = self.customer.phone;
+            break;
+        case 3:
+            text = self.customer.email;
+            break;
+        case 4:
+            text = self.customer.address1;
+            break;
+        case 5:
+            text = self.customer.address2;
+            break;
+        case 6:
+            text = self.customer.city;
+            break;
+        case 7:
+            text = self.customer.state;
+            break;
+        case 8:
+            text = self.customer.zipcode;
+            break;
+        default:
+            break;
+    }
+    
+    NSString *title = self.dataSourceArray[row][kTitleKey];
+    NSString *placeholder = self.dataSourceArray[row][kPlaceholderKey];
+    NSNumber *keyboardType = self.dataSourceArray[row][kKeyboardKey];
+    
+    [cell setContentForTableCellLabel:title placeHolder:placeholder text:text keyBoardType:keyboardType enabled:self.isEditing];
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
