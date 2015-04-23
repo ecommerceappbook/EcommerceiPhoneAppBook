@@ -25,28 +25,28 @@ static NSString *kKeyboardKey = @"keyboardTypeKey";
     [super viewDidLoad];
     self.dataSourceArray = @[
                              @{
-                                 kTitleKey:NSLocalizedString(@"First Name", @"First Name"),
+                                 kTitleKey:NSLocalizedString(@"First Name*", @"First Name"),
                                  kPlaceholderKey:NSLocalizedString(@"First Name", @"First Name"),
                                  kKeyboardKey:@(UIKeyboardTypeNamePhonePad)},
                              @{
-                                 kTitleKey:NSLocalizedString(@"Last Name",@""),
+                                 kTitleKey:NSLocalizedString(@"Last Name*",@""),
                                  kPlaceholderKey:NSLocalizedString(@"Last Name",@""),
                                  kKeyboardKey:@(UIKeyboardTypeNamePhonePad)},
                              
                              @{
-                                 kTitleKey:NSLocalizedString(@"Phone",@""),
+                                 kTitleKey:NSLocalizedString(@"Phone*",@""),
                                  kPlaceholderKey:@"555-555-5555",
                                  kKeyboardKey:@(UIKeyboardTypePhonePad)},
                              
                              
                              @{
-                                 kTitleKey:NSLocalizedString(@"Email",@""),
+                                 kTitleKey:NSLocalizedString(@"Email*",@""),
                                  kPlaceholderKey:@"Email",
                                  kKeyboardKey:@(UIKeyboardTypeEmailAddress)},
                              
                              
                              @{
-                                 kTitleKey:NSLocalizedString(@"Address 1",@""),
+                                 kTitleKey:NSLocalizedString(@"Address 1*",@""),
                                  kPlaceholderKey:@"Address 1",
                                  kKeyboardKey:@(UIKeyboardTypeDefault)},
                              @{
@@ -55,19 +55,19 @@ static NSString *kKeyboardKey = @"keyboardTypeKey";
                                  kKeyboardKey:@(UIKeyboardTypeDefault)},
                              
                              @{
-                                 kTitleKey:NSLocalizedString(@"City",@""),
+                                 kTitleKey:NSLocalizedString(@"City*",@""),
                                  kPlaceholderKey:NSLocalizedString(@"City",@""),
                                  kKeyboardKey:@(UIKeyboardTypeDefault)},
                              
                              
                              @{
-                                 kTitleKey:NSLocalizedString(@"State",@""),
+                                 kTitleKey:NSLocalizedString(@"State*",@""),
                                  kPlaceholderKey:NSLocalizedString(@"State",@""),
                                  kKeyboardKey:@(UIKeyboardTypeDefault)},
                              
                              
                              @{
-                                 kTitleKey:NSLocalizedString(@"Zipcode",@""),
+                                 kTitleKey:NSLocalizedString(@"Zipcode*",@""),
                                  kPlaceholderKey:@"#####",
                                  kKeyboardKey:@(UIKeyboardTypeNumberPad)}
                              ];
@@ -82,12 +82,26 @@ static NSString *kKeyboardKey = @"keyboardTypeKey";
     [self.tableView reloadData];
     
     if (!editing) {
-        [self.customer saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!error) {
-              
-                
-            }
-        }];
+        if ([self.customer isShippingAddressCompleted]) {
+            [self.customer saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    
+                    
+                }
+            }];
+        } else {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", @"Warning")
+                                                                           message:NSLocalizedString(@"Please complete the required information denoted by *",@"")
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK",@"OK") style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+            
+        }
+        
         
     }
 }
