@@ -24,7 +24,6 @@
 }
 
 - (void)paymentView:(PTKView *)paymentView withCard:(PTKCard *)card isValid:(BOOL)valid {
-    // Enable save button if the Checkout is valid
     self.navigationItem.rightBarButtonItem.enabled = valid;
 }
 
